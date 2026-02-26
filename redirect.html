@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/developer?id=Lars+G">
     <title>Redirecting...</title>
+    <script type="text/javascript">
+        function smartRedirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            // 1. URLs definieren
+            var appleStoreUrl = "https://apps.apple.com/de/developer/lars-ghezzi"; // Hier später deine echte Apple-ID eintragen
+            var googlePlayUrl = "https://play.google.com/store/apps/developer?id=Lars+G";
+            var fallbackUrl = "https://play.google.com/store/apps/developer?id=Lars+G";
+            // 2. Logik zur Erkennung
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Nutzer ist auf einem iOS-Gerät
+                window.location.href = appleStoreUrl;
+            } 
+            else if (/android/i.test(userAgent)) {
+                // Nutzer ist auf einem Android-Gerät
+                window.location.href = googlePlayUrl;
+            } 
+            else {
+                // PC/Mac oder anderes Gerät
+                window.location.href = fallbackUrl;
+            }
+        }
+        // Skript sofort ausführen
+        smartRedirect();
+    </script>
 </head>
 <body>
-    <p>Redirecting to Store...</p>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Redirecting to Store...
+    </p>
 </body>
 </html>
