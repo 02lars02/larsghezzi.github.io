@@ -23,6 +23,17 @@ header h1 {
     margin: 0;
     font-size: 24px;
     color: #333333;
+    /* Neu: Richtet Text und Icon nebeneinander aus */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Abstand zwischen Name und Icon */
+}
+
+/* Neu: Styling für dein Icon */
+.header-logo {
+    height: 32px; /* Etwas größer als die Schrift für eine gute Optik */
+    width: auto;
+    border-radius: 6px; /* Optional: leicht abgerundete Ecken */
 }
 
 /* --- Schwarzer Store Button --- */
