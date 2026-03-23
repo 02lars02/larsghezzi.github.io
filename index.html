@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lars Ghezzi</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Lars Ghezzi - Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pic/icon.png">
 </head>
 <body>
-
-    <div class="container">
-        <h1>App's:</h1>
-		<h2>coming soon...</h2>
-        <a href="redirect.html">
-            <button type="button">redirect to App-/Play-Store</button>
-        </a>
-    </div>
-
+    <header>
+        <h1>Lars Ghezzi</h1>
+        <a href="redirect.html" class="store-button">To Store</a>
+    </header>
+    <main>
+        <div class="slider-container">
+            <div class="slide fade">
+                <a href="airlineops.html">
+                    <img src="pic/airops.jpg" alt="AirlineOps: Schedule Manager">
+                </a>
+            </div>
+            <div class="slide fade">
+                <a href="focus-queen.html">
+                    <img src="pic/queen.jpg" alt="Focus Queen">
+                </a>
+            </div>
+            <div class="slide fade">
+                <a href="focus-garden.html">
+                    <img src="pic/garden.jpg" alt="Focus Garden">
+                </a>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </main>
+	<footer>
+        <p><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+        <p>Support: <a href="mailto:lars.g02@gmail.com" class="footer-link">lars.g02@gmail</a></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

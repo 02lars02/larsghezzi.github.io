@@ -1,0 +1,134 @@
+/* Globale Einstellungen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #f8f9fa;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* --- Schwarzer Store Button --- */
+.store-button {
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.store-button:hover {
+    background-color: #333333;
+}
+
+/* Main & Slider */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.slider-container {
+    max-width: 1024px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 1024px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Slider Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+@keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+}
+
+/* --- Footer Links & Rechts Layout --- */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px 5%;
+    margin-top: auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Links wie normalen Text aussehen lassen --- */
+.footer-link {
+    color: #ffffff; 
+    text-decoration: none; 
+    cursor: default; 
+}
+
+.footer-link:hover {
+    text-decoration: none; 
+}
