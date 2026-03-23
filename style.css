@@ -17,23 +17,26 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #eeeeee;
+    flex-wrap: wrap; /* Neu: Verhindert, dass Button und Titel auf kleinen Screens kollidieren */
+    gap: 15px; 
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
     color: #333333;
-    /* Neu: Richtet Text und Icon nebeneinander aus */
     display: flex;
     align-items: center;
-    gap: 12px; /* Abstand zwischen Name und Icon */
+    gap: 12px; 
 }
 
 /* Neu: Styling für dein Icon */
 .header-logo {
-    height: 32px; /* Etwas größer als die Schrift für eine gute Optik */
-    width: auto;
-    border-radius: 6px; /* Optional: leicht abgerundete Ecken */
+    height: 32px; 
+    width: 32px; /* Feste Breite anstelle von auto */
+    object-fit: contain; /* Sorgt dafür, dass die Proportionen stimmen, auch wenn das Icon nicht exakt quadratisch ist */
+    flex-shrink: 0; /* Verhindert, dass das Icon auf mobilen Geräten verzerrt oder riesig wird */
+    border-radius: 6px; 
 }
 
 /* --- Schwarzer Store Button --- */
