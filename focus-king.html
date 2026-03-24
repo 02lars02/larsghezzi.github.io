@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        function smartRedirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // 1. URLs definieren
+            var appleStoreUrl = "https://apps.apple.com/de/app/focus-king-stay-sharp-king/id6759491003";
+            var googlePlayUrl = "https://play.google.com/store/apps/details?id=ch.larsghezzi.focusking";
+            var fallbackUrl = "https://play.google.com/store/apps/details?id=ch.larsghezzi.focusking";
+
+            // 2. iOS / iPadOS Erkennung
+            // Beinhaltet iPhone, iPod, alte iPads UND moderne iPads (die sich als Mac ausgeben, aber Touchscreens haben)
+            var isIOS = (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) || 
+                        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+            // 3. Android Erkennung
+            var isAndroid = /android/i.test(userAgent);
+
+            // 4. Weiterleitung ausführen
+            // Wir nutzen 'replace' statt 'href', damit der Redirect nicht den Browserverlauf "zumüllt"
+            if (isIOS) {
+                window.location.replace(appleStoreUrl);
+            } else if (isAndroid) {
+                window.location.replace(googlePlayUrl);
+            } else {
+                window.location.replace(fallbackUrl);
+            }
+        }
+
+        // 5. Skript ausführen, sobald die Seite grundlegend geladen ist
+        // Ein minimaler Delay umgeht die strengen Weiterleitungs-Blocker mancher Browser (wie Firefox)
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(smartRedirect, 100);
+        });
+    </script>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Redirecting to Store...
+    </p>
+</body>
+</html>
