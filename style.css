@@ -23,20 +23,15 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
-    color: #333333;
+    padding: 0;
     display: flex;
     align-items: center;
-    gap: 12px; 
 }
 
-/* Neu: Styling für dein Icon */
 .header-logo {
-    height: 32px; 
-    width: 32px; /* Feste Breite anstelle von auto */
-    object-fit: contain; /* Sorgt dafür, dass die Proportionen stimmen, auch wenn das Icon nicht exakt quadratisch ist */
-    flex-shrink: 0; /* Verhindert, dass das Icon auf mobilen Geräten verzerrt oder riesig wird */
-    border-radius: 6px; 
+    height: 50px; /* Hier kannst du die Größe deines Banners steuern (z.B. 50px oder 70px) */
+    width: auto;  /* Sorgt dafür, dass das Bild nicht verzerrt wird */
+    display: block;
 }
 
 /* --- Schwarzer Store Button --- */
