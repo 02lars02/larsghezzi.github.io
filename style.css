@@ -35,6 +35,7 @@ header h1 {
     max-width: 100%; /* Bild skaliert auf kleinen Bildschirmen automatisch mit */
     height: auto;
     display: block;
+    flex-shrink: 0; /* Verhindert das Zusammenstauchen im Flex-Container */
 }
 
 /* --- Schwarzer Store Button --- */
@@ -155,8 +156,8 @@ footer p {
 /* --- Mobile Optimierungen --- */
 @media (max-width: 600px) {
     header {
-        justify-content: center; /* Zentriert Logo und Button auf sehr kleinen Screens */
-        text-align: center;
+        justify-content: space-between; /* Schiebt Logo nach links und Button nach rechts */
+        flex-wrap: nowrap; /* Zwingt beide Elemente in dieselbe Zeile */
     }
     footer {
         flex-direction: column; /* Stapelt die Footer-Inhalte auf dem Handy untereinander */
