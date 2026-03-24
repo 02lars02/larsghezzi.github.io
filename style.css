@@ -1,4 +1,8 @@
 /* Globale Einstellungen */
+*, *::before, *::after {
+    box-sizing: border-box; /* Verhindert, dass Padding die Breite der Elemente verfälscht */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,7 +16,8 @@ body {
 /* Header */
 header {
     background-color: #f8f9fa;
-    padding: 15px 5%; /* Etwas reduziertes Padding für Mobile */
+    width: 100%; /* Sichert ab, dass der Header immer exakt die volle Breite nutzt */
+    padding: 15px 5%; /* Gleicher Abstand links und rechts */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +67,6 @@ main {
     align-items: center;
     padding: 20px 5%; /* Padding auf Mobile optimiert */
     width: 100%;
-    box-sizing: border-box;
 }
 
 .slider-container {
@@ -130,6 +134,7 @@ footer {
     background-color: #333333;
     color: #ffffff;
     padding: 20px 5%;
+    width: 100%; /* Sichert Symmetrie im Footer */
     margin-top: auto;
     display: flex; 
     justify-content: space-between; 
