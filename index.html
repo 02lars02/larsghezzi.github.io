@@ -1,102 +1,674 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lars Ghezzi</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="pic/icon.png">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMD860S21J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VMD860S21J');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apps und Games von Lars Ghezzi – alle Projekte auf einen Blick.">
+  <title>Lars Ghezzi</title>
+  <link rel="icon" type="image/png" href="pic/icon.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMD860S21J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VMD860S21J');
+  </script>
+
+  <style>
+    :root {
+      --bg: #070a12;
+      --bg-soft: #101624;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.14);
+      --text: #f7f9ff;
+      --muted: #aab4c8;
+      --line: rgba(255, 255, 255, 0.16);
+      --accent: #7c5cff;
+      --accent-2: #2ee6a6;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 5%, rgba(124, 92, 255, 0.38), transparent 30rem),
+        radial-gradient(circle at 85% 10%, rgba(46, 230, 166, 0.22), transparent 26rem),
+        linear-gradient(135deg, #050711 0%, #101423 50%, #080b13 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent 75%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 10, 18, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .header-logo {
+      width: clamp(150px, 24vw, 245px);
+      height: auto;
+      filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.32));
+    }
+
+    .store-button,
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 12px 18px;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      background: linear-gradient(135deg, var(--accent), #5a8dff);
+      box-shadow: 0 12px 32px rgba(94, 110, 255, 0.32);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      white-space: nowrap;
+    }
+
+    .store-button:hover,
+    .hero-button:hover,
+    .store-button:focus-visible,
+    .hero-button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 44px rgba(94, 110, 255, 0.42);
+      border-color: rgba(255, 255, 255, 0.44);
+      outline: none;
+    }
+
+    .hero {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(46px, 8vw, 92px) 0 clamp(22px, 5vw, 48px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: clamp(28px, 6vw, 70px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      margin: 0 0 18px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.06);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 22px var(--accent-2);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5.9rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(135deg, #ffffff 10%, #b9c6ff 48%, #7cffd4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+      align-items: center;
+    }
+
+    .secondary-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.05);
+      font-weight: 800;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .secondary-link:hover,
+    .secondary-link:focus-visible {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .hero-panel {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: clamp(18px, 3vw, 26px);
+      background: linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -25%;
+      background: radial-gradient(circle, rgba(124, 92, 255, 0.34), transparent 58%);
+      transform: translate(28%, -22%);
+    }
+
+    .featured-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+    }
+
+    .featured-grid img {
+      width: 100%;
+      height: 100%;
+      min-height: 155px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .featured-grid a:first-child {
+      grid-row: span 2;
+    }
+
+    .apps-section {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(18px, 5vw, 50px) 0 clamp(56px, 8vw, 96px);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-heading p {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: clamp(16px, 2.4vw, 24px);
+    }
+
+    .app-card {
+      position: relative;
+      isolation: isolate;
+      min-height: 275px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--card);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .app-card:hover,
+    .app-card:focus-within {
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.38);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.34);
+    }
+
+    .app-card a {
+      display: grid;
+      min-height: inherit;
+      color: var(--text);
+    }
+
+    .app-card img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: var(--bg-soft);
+      transition: transform 260ms ease, filter 260ms ease;
+    }
+
+    .app-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(to top, rgba(4, 7, 16, 0.94) 0%, rgba(4, 7, 16, 0.56) 44%, rgba(4, 7, 16, 0.06) 100%);
+    }
+
+    .app-card:hover img,
+    .app-card:focus-within img {
+      transform: scale(1.045);
+      filter: saturate(1.12);
+    }
+
+    .app-info {
+      align-self: end;
+      padding: 20px;
+    }
+
+    .app-info h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .app-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #dce4ff;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .app-info span::after {
+      content: "→";
+      transition: transform 180ms ease;
+    }
+
+    .app-card:hover .app-info span::after,
+    .app-card:focus-within .app-info span::after {
+      transform: translateX(4px);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: rgba(7, 10, 18, 0.72);
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 26px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-link {
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.28);
+      text-underline-offset: 4px;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      text-decoration-color: var(--accent-2);
+      outline: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        order: -1;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav {
+        min-height: 68px;
+        width: min(100% - 24px, var(--max-width));
+      }
+
+      .store-button {
+        padding: 10px 14px;
+      }
+
+      .hero,
+      .apps-section,
+      .footer-inner {
+        width: min(100% - 24px, var(--max-width));
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-button,
+      .secondary-link {
+        width: 100%;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .featured-grid img {
+        min-height: 110px;
+        border-radius: 16px;
+      }
+
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .app-card {
+        min-height: 235px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-		<h1>
-			<img src="pic/logo.png" alt="" class="header-logo">
-		</h1>
-		<a href="redirect.html" class="store-button">Store</a>
-	</header>
-    <main>
-        <div class="slider-container">
-			<div class="slide fade">
-                <a href="govcraft.html">
-                    <img src="pic/govcraft.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="musictycoon.html">
-                    <img src="pic/musictycoon.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="yourhonor.html">
-                    <img src="pic/honor.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="wardentycoon.html">
-                    <img src="pic/warden.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="conclave.html">
-                    <img src="pic/conclave.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="mayorsim.html">
-                    <img src="pic/mayorsim.png" alt="GovCraft: President Simulator">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="skyempire.html">
-                    <img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="loop-looters.html">
-                    <img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="foldings.html">
-                    <img src="pic/foldings.png" alt="Foldings: Puzzle Runner">
-                </a>
-            </div>
-            <div class="slide fade">
-                <a href="airlineops.html">
-                    <img src="pic/airops.jpg" alt="AirlineOps: Schedule Manager">
-                </a>
-            </div>
-			<div class="slide fade">
-                <a href="focus-king.html">
-                    <img src="pic/king.jpg" alt="Focus King">
-                </a>
-            </div>
-            <div class="slide fade">
-                <a href="focus-queen.html">
-                    <img src="pic/queen.jpg" alt="Focus Queen">
-                </a>
-            </div>
-            <div class="slide fade">
-                <a href="focus-garden.html">
-                    <img src="pic/garden.jpg" alt="Focus Garden">
-                </a>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="brand" href="index.html" aria-label="Lars Ghezzi Startseite">
+        <img src="pic/logo.png" alt="Lars Ghezzi" class="header-logo">
+      </a>
+      <a href="redirect.html" class="store-button">Store</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Indie Apps & Games</p>
+        <h1 id="hero-title">Alle Apps <span>auf einen Blick.</span></h1>
+        <p class="hero-copy">Entdecke Strategie-, Tycoon-, Puzzle- und Focus-Apps.</p>
+        <div class="hero-actions">
+          <a href="#apps" class="hero-button">Apps entdecken</a>
+          <a href="redirect.html" class="secondary-link">Zum Store</a>
         </div>
-    </main>
-	<footer>
-        <p><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
-        <p>Contact: <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
-    </footer>
-    <script src="script.js"></script>
+      </div>
+    </section>
+
+    <section class="apps-section" id="apps" aria-labelledby="apps-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="apps-title">Apps & Games</h2>
+        </div>
+      </div>
+
+      <div class="apps-grid">
+        <article class="app-card">
+          <a href="govcraft.html">
+            <img src="pic/govcraft.png" alt="GovCraft: President Simulator" loading="lazy">
+            <div class="app-info">
+              <h3>GovCraft</h3>
+              <span>President Simulator</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="musictycoon.html">
+            <img src="pic/musictycoon.png" alt="Music Tycoon" loading="lazy">
+            <div class="app-info">
+              <h3>Music Tycoon</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="yourhonor.html">
+            <img src="pic/honor.png" alt="Your Honor" loading="lazy">
+            <div class="app-info">
+              <h3>Your Honor</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="wardentycoon.html">
+            <img src="pic/warden.png" alt="Warden Tycoon" loading="lazy">
+            <div class="app-info">
+              <h3>Warden Tycoon</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="conclave.html">
+            <img src="pic/conclave.png" alt="Conclave" loading="lazy">
+            <div class="app-info">
+              <h3>Conclave</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="mayorsim.html">
+            <img src="pic/mayorsim.png" alt="Mayor Sim" loading="lazy">
+            <div class="app-info">
+              <h3>Mayor Sim</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="skyempire.html">
+            <img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon" loading="lazy">
+            <div class="app-info">
+              <h3>Sky Empire</h3>
+              <span>Airline Tycoon</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="loop-looters.html">
+            <img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt" loading="lazy">
+            <div class="app-info">
+              <h3>Loop Looters</h3>
+              <span>Echo Hunt</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="foldings.html">
+            <img src="pic/foldings.png" alt="Foldings: Puzzle Runner" loading="lazy">
+            <div class="app-info">
+              <h3>Foldings</h3>
+              <span>Puzzle Runner</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="airlineops.html">
+            <img src="pic/airops.jpg" alt="AirlineOps: Schedule Manager" loading="lazy">
+            <div class="app-info">
+              <h3>AirlineOps</h3>
+              <span>Schedule Manager</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="focus-king.html">
+            <img src="pic/king.jpg" alt="Focus King" loading="lazy">
+            <div class="app-info">
+              <h3>Focus King</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="focus-queen.html">
+            <img src="pic/queen.jpg" alt="Focus Queen" loading="lazy">
+            <div class="app-info">
+              <h3>Focus Queen</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="app-card">
+          <a href="focus-garden.html">
+            <img src="pic/garden.jpg" alt="Focus Garden" loading="lazy">
+            <div class="app-info">
+              <h3>Focus Garden</h3>
+              <span>App ansehen</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+      <p>Contact: <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
+    </div>
+  </footer>
 </body>
 </html>
