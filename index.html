@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apps und Games von Lars Ghezzi – alle Projekte auf einen Blick.">
+  <meta name="description" content="Apps and games by Lars Ghezzi – all projects at display.">
   <title>Lars Ghezzi</title>
   <link rel="icon" type="image/png" href="pic/icon.png">
 
@@ -105,6 +105,52 @@
       width: clamp(150px, 24vw, 245px);
       height: auto;
       filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.32));
+    }
+
+
+
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .language-option {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 11px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .language-option:hover,
+    .language-option:focus-visible {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+    }
+
+    .language-option[aria-pressed="true"] {
+      color: #06110e;
+      background: var(--accent-2);
     }
 
     .store-button,
@@ -442,6 +488,15 @@
         width: min(100% - 24px, var(--max-width));
       }
 
+      .nav-actions {
+        gap: 8px;
+      }
+
+      .language-option {
+        padding: 7px 9px;
+        font-size: 0.78rem;
+      }
+
       .store-button {
         padding: 10px 14px;
       }
@@ -490,6 +545,29 @@
       }
     }
 
+
+    @media (max-width: 420px) {
+      .header-logo {
+        width: 128px;
+      }
+
+      .nav {
+        gap: 10px;
+      }
+
+      .nav-actions {
+        gap: 6px;
+      }
+
+      .language-option {
+        padding: 6px 8px;
+      }
+
+      .store-button {
+        padding: 9px 11px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         scroll-behavior: auto !important;
@@ -501,23 +579,29 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a class="brand" href="index.html" aria-label="Lars Ghezzi Startseite">
+    <nav class="nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+      <a class="brand" href="index.html" aria-label="Lars Ghezzi homepage" data-i18n-aria-label="brandLabel">
         <img src="pic/logo.png" alt="Lars Ghezzi" class="header-logo">
       </a>
-      <a href="redirect.html" class="store-button">Store</a>
+      <div class="nav-actions">
+        <div class="language-switch" role="group" aria-label="Language selection" data-i18n-aria-label="languageSelection">
+          <button type="button" class="language-option" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" class="language-option" data-language="de" aria-pressed="false">DE</button>
+        </div>
+        <a href="redirect.html" class="store-button" data-i18n="store">Store</a>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <p class="eyebrow">Indie Apps & Games</p>
-        <h1 id="hero-title">Alle Apps <span>auf einen Blick.</span></h1>
-        <p class="hero-copy">Entdecke Strategie-, Tycoon-, Puzzle- und Focus-Apps.</p>
+        <p class="eyebrow" data-i18n="heroEyebrow">Indie Apps & Games</p>
+        <h1 id="hero-title" data-i18n-html="heroTitle">All apps <span>at display.</span></h1>
+        <p class="hero-copy" data-i18n="heroCopy">Discover strategy, tycoon, puzzle and focus apps.</p>
         <div class="hero-actions">
-          <a href="#apps" class="hero-button">Apps entdecken</a>
-          <a href="redirect.html" class="secondary-link">Zum Store</a>
+          <a href="#apps" class="hero-button" data-i18n="discoverApps">Discover apps</a>
+          <a href="redirect.html" class="secondary-link" data-i18n="goToStore">Go to Store</a>
         </div>
       </div>
     </section>
@@ -525,8 +609,8 @@
     <section class="apps-section" id="apps" aria-labelledby="apps-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Portfolio</p>
-          <h2 id="apps-title">Apps & Games</h2>
+          <p class="eyebrow" data-i18n="portfolioEyebrow">Portfolio</p>
+          <h2 id="apps-title" data-i18n="appsTitle">Apps & Games</h2>
         </div>
       </div>
 
@@ -536,7 +620,7 @@
             <img src="pic/govcraft.png" alt="GovCraft: President Simulator" loading="lazy">
             <div class="app-info">
               <h3>GovCraft</h3>
-              <span>President Simulator</span>
+              <span data-i18n="govcraftTagline">President Simulator</span>
             </div>
           </a>
         </article>
@@ -546,7 +630,7 @@
             <img src="pic/musictycoon.png" alt="Music Tycoon" loading="lazy">
             <div class="app-info">
               <h3>Music Tycoon</h3>
-              <span>Label Manager</span>
+              <span data-i18n="musicTycoonTagline">Label Manager</span>
             </div>
           </a>
         </article>
@@ -556,7 +640,7 @@
             <img src="pic/honor.png" alt="Your Honor" loading="lazy">
             <div class="app-info">
               <h3>Your Honor</h3>
-              <span>Judge Simulator</span>
+              <span data-i18n="yourHonorTagline">Judge Simulator</span>
             </div>
           </a>
         </article>
@@ -566,7 +650,7 @@
             <img src="pic/warden.png" alt="Warden Tycoon" loading="lazy">
             <div class="app-info">
               <h3>Warden Tycoon</h3>
-              <span>Prison Manager</span>
+              <span data-i18n="wardenTycoonTagline">Prison Manager</span>
             </div>
           </a>
         </article>
@@ -576,7 +660,7 @@
             <img src="pic/conclave.png" alt="Conclave" loading="lazy">
             <div class="app-info">
               <h3>Conclave</h3>
-              <span>Pope Simulator</span>
+              <span data-i18n="conclaveTagline">Pope Simulator</span>
             </div>
           </a>
         </article>
@@ -586,7 +670,7 @@
             <img src="pic/mayorsim.png" alt="Mayor Sim" loading="lazy">
             <div class="app-info">
               <h3>Mayor Sim</h3>
-              <span>Run your City</span>
+              <span data-i18n="mayorSimTagline">Run your city</span>
             </div>
           </a>
         </article>
@@ -596,7 +680,7 @@
             <img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon" loading="lazy">
             <div class="app-info">
               <h3>Sky Empire</h3>
-              <span>Airline Tycoon</span>
+              <span data-i18n="skyEmpireTagline">Airline Tycoon</span>
             </div>
           </a>
         </article>
@@ -606,7 +690,7 @@
             <img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt" loading="lazy">
             <div class="app-info">
               <h3>Loop Looters</h3>
-              <span>Echo Hunt</span>
+              <span data-i18n="loopLootersTagline">Echo Hunt</span>
             </div>
           </a>
         </article>
@@ -616,7 +700,7 @@
             <img src="pic/foldings.png" alt="Foldings: Puzzle Runner" loading="lazy">
             <div class="app-info">
               <h3>Foldings</h3>
-              <span>Puzzle Runner</span>
+              <span data-i18n="foldingsTagline">Puzzle Runner</span>
             </div>
           </a>
         </article>
@@ -626,7 +710,7 @@
             <img src="pic/airops.jpg" alt="AirlineOps: Schedule Manager" loading="lazy">
             <div class="app-info">
               <h3>AirlineCeo</h3>
-              <span>Schedule Manager</span>
+              <span data-i18n="airlineCeoTagline">Schedule Manager</span>
             </div>
           </a>
         </article>
@@ -636,7 +720,7 @@
             <img src="pic/king.jpg" alt="Focus King" loading="lazy">
             <div class="app-info">
               <h3>Focus King</h3>
-              <span>Stay sharp King</span>
+              <span data-i18n="focusKingTagline">Stay sharp, King</span>
             </div>
           </a>
         </article>
@@ -646,7 +730,7 @@
             <img src="pic/queen.jpg" alt="Focus Queen" loading="lazy">
             <div class="app-info">
               <h3>Focus Queen</h3>
-              <span>Stay slay Queen</span>
+              <span data-i18n="focusQueenTagline">Stay slay, Queen</span>
             </div>
           </a>
         </article>
@@ -656,7 +740,7 @@
             <img src="pic/garden.jpg" alt="Focus Garden" loading="lazy">
             <div class="app-info">
               <h3>Focus Garden</h3>
-              <span>Time your Growth</span>
+              <span data-i18n="focusGardenTagline">Grow with focus</span>
             </div>
           </a>
         </article>
@@ -666,9 +750,134 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
-      <p>Contact: <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
+      <p><a href="privacy-policy.html" class="footer-link" data-i18n="privacyPolicy">Privacy Policy</a></p>
+      <p><span data-i18n="contactLabel">Contact:</span> <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const DEFAULT_LANGUAGE = "en";
+      const translations = {
+        en: {
+          pageDescription: "Apps and games by Lars Ghezzi – all projects at display.",
+          mainNavigation: "Main navigation",
+          brandLabel: "Lars Ghezzi homepage",
+          languageSelection: "Language selection",
+          store: "Store",
+          heroEyebrow: "Indie Apps & Games",
+          heroTitle: "All apps <span>at display.</span>",
+          heroCopy: "Discover strategy, tycoon, puzzle and focus apps.",
+          discoverApps: "Discover apps",
+          goToStore: "Go to Store",
+          portfolioEyebrow: "Portfolio",
+          appsTitle: "Apps & Games",
+          govcraftTagline: "President Simulator",
+          musicTycoonTagline: "Label Manager",
+          yourHonorTagline: "Judge Simulator",
+          wardenTycoonTagline: "Prison Manager",
+          conclaveTagline: "Pope Simulator",
+          mayorSimTagline: "Run your city",
+          skyEmpireTagline: "Airline Tycoon",
+          loopLootersTagline: "Echo Hunt",
+          foldingsTagline: "Puzzle Runner",
+          airlineCeoTagline: "Schedule Manager",
+          focusKingTagline: "Stay sharp, King",
+          focusQueenTagline: "Stay slay, Queen",
+          focusGardenTagline: "Grow with focus",
+          privacyPolicy: "Privacy Policy",
+          contactLabel: "Contact:"
+        },
+        de: {
+          pageDescription: "Apps und Games von Lars Ghezzi – alle Projekte auf einen Blick.",
+          mainNavigation: "Hauptnavigation",
+          brandLabel: "Lars Ghezzi Startseite",
+          languageSelection: "Sprachauswahl",
+          store: "Store",
+          heroEyebrow: "Indie Apps & Games",
+          heroTitle: "Alle Apps <span>auf einen Blick.</span>",
+          heroCopy: "Entdecke Strategie-, Tycoon-, Puzzle- und Fokus-Apps.",
+          discoverApps: "Apps entdecken",
+          goToStore: "Zum Store",
+          portfolioEyebrow: "Portfolio",
+          appsTitle: "Apps & Games",
+          govcraftTagline: "Präsidenten-Simulator",
+          musicTycoonTagline: "Label-Manager",
+          yourHonorTagline: "Richter-Simulator",
+          wardenTycoonTagline: "Gefängnis-Manager",
+          conclaveTagline: "Papst-Simulator",
+          mayorSimTagline: "Leite deine Stadt",
+          skyEmpireTagline: "Airline-Tycoon",
+          loopLootersTagline: "Echo-Jagd",
+          foldingsTagline: "Puzzle-Runner",
+          airlineCeoTagline: "Flugplan-Manager",
+          focusKingTagline: "Bleib fokussiert, King",
+          focusQueenTagline: "Bleib fokussiert, Queen",
+          focusGardenTagline: "Fokussiert wachsen",
+          privacyPolicy: "Datenschutzerklärung",
+          contactLabel: "Kontakt:"
+        }
+      };
+
+      function setText(selector, dictionary, key, useHTML) {
+        document.querySelectorAll(selector).forEach(function (element) {
+          if (!dictionary[key]) return;
+          if (useHTML) {
+            element.innerHTML = dictionary[key];
+          } else {
+            element.textContent = dictionary[key];
+          }
+        });
+      }
+
+      function setLanguage(language) {
+        const activeLanguage = translations[language] ? language : DEFAULT_LANGUAGE;
+        const dictionary = translations[activeLanguage];
+
+        document.documentElement.lang = activeLanguage;
+        document.querySelector('meta[name="description"]').setAttribute("content", dictionary.pageDescription);
+
+        document.querySelectorAll("[data-i18n]").forEach(function (element) {
+          const key = element.getAttribute("data-i18n");
+          if (dictionary[key]) element.textContent = dictionary[key];
+        });
+
+        document.querySelectorAll("[data-i18n-html]").forEach(function (element) {
+          const key = element.getAttribute("data-i18n-html");
+          if (dictionary[key]) element.innerHTML = dictionary[key];
+        });
+
+        document.querySelectorAll("[data-i18n-aria-label]").forEach(function (element) {
+          const key = element.getAttribute("data-i18n-aria-label");
+          if (dictionary[key]) element.setAttribute("aria-label", dictionary[key]);
+        });
+
+        document.querySelectorAll(".language-option").forEach(function (button) {
+          const isActive = button.getAttribute("data-language") === activeLanguage;
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        try {
+          localStorage.setItem("preferredLanguage", activeLanguage);
+        } catch (error) {
+          // localStorage can be disabled; the site still works with the default language.
+        }
+      }
+
+      document.querySelectorAll(".language-option").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLanguage(button.getAttribute("data-language"));
+        });
+      });
+
+      let savedLanguage = DEFAULT_LANGUAGE;
+      try {
+        savedLanguage = localStorage.getItem("preferredLanguage") || DEFAULT_LANGUAGE;
+      } catch (error) {
+        savedLanguage = DEFAULT_LANGUAGE;
+      }
+      setLanguage(savedLanguage);
+    }());
+  </script>
 </body>
 </html>
