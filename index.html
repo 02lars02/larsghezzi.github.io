@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apps and games by Lars Ghezzi – all projects at display.">
+  <meta name="description" content="Apps and games by Lars Ghezzi – all projects at a glance.">
   <title>Lars Ghezzi</title>
   <link rel="icon" type="image/png" href="pic/icon.png">
 
@@ -548,23 +548,46 @@
 
     @media (max-width: 420px) {
       .header-logo {
-        width: 128px;
+        width: 116px;
       }
 
       .nav {
-        gap: 10px;
+        gap: 8px;
+        width: min(100% - 20px, var(--max-width));
       }
 
       .nav-actions {
-        gap: 6px;
+        gap: 5px;
+        flex-shrink: 0;
+      }
+
+      .language-switch {
+        gap: 2px;
+        padding: 3px;
       }
 
       .language-option {
-        padding: 6px 8px;
+        padding: 6px 7px;
+        font-size: 0.72rem;
       }
 
       .store-button {
-        padding: 9px 11px;
+        padding: 8px 10px;
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .header-logo {
+        width: 104px;
+      }
+
+      .language-option {
+        padding: 5px 6px;
+      }
+
+      .store-button {
+        padding: 7px 9px;
       }
     }
 
@@ -597,7 +620,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
         <p class="eyebrow" data-i18n="heroEyebrow">Indie Apps & Games</p>
-        <h1 id="hero-title" data-i18n-html="heroTitle">All apps <span>at display.</span></h1>
+        <h1 id="hero-title" data-i18n-html="heroTitle">All apps <span>at a glance.</span></h1>
         <p class="hero-copy" data-i18n="heroCopy">Discover strategy, tycoon, puzzle and focus apps.</p>
         <div class="hero-actions">
           <a href="#apps" class="hero-button" data-i18n="discoverApps">Discover apps</a>
@@ -760,13 +783,13 @@
       const DEFAULT_LANGUAGE = "en";
       const translations = {
         en: {
-          pageDescription: "Apps and games by Lars Ghezzi – all projects at display.",
+          pageDescription: "Apps and games by Lars Ghezzi – all projects at a glance.",
           mainNavigation: "Main navigation",
           brandLabel: "Lars Ghezzi homepage",
           languageSelection: "Language selection",
           store: "Store",
           heroEyebrow: "Indie Apps & Games",
-          heroTitle: "All apps <span>at display.</span>",
+          heroTitle: "All apps <span>at a glance.</span>",
           heroCopy: "Discover strategy, tycoon, puzzle and focus apps.",
           discoverApps: "Discover apps",
           goToStore: "Go to Store",
@@ -830,6 +853,8 @@
         });
       }
 
+      const LANGUAGE_STORAGE_KEY = "preferredLanguageV2";
+
       function setLanguage(language) {
         const activeLanguage = translations[language] ? language : DEFAULT_LANGUAGE;
         const dictionary = translations[activeLanguage];
@@ -858,7 +883,7 @@
         });
 
         try {
-          localStorage.setItem("preferredLanguage", activeLanguage);
+          localStorage.setItem(LANGUAGE_STORAGE_KEY, activeLanguage);
         } catch (error) {
           // localStorage can be disabled; the site still works with the default language.
         }
@@ -870,13 +895,18 @@
         });
       });
 
-      let savedLanguage = DEFAULT_LANGUAGE;
-      try {
-        savedLanguage = localStorage.getItem("preferredLanguage") || DEFAULT_LANGUAGE;
-      } catch (error) {
-        savedLanguage = DEFAULT_LANGUAGE;
+      function getInitialLanguage() {
+        try {
+          const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+          if (translations[savedLanguage]) return savedLanguage;
+        } catch (error) {
+          // localStorage can be disabled; fall back to the default language.
+        }
+
+        return DEFAULT_LANGUAGE;
       }
-      setLanguage(savedLanguage);
+
+      setLanguage(getInitialLanguage());
     }());
   </script>
 </body>
