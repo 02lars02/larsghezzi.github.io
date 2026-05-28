@@ -423,6 +423,30 @@
       transform: translateX(4px);
     }
 
+    .coming-soon-card {
+      display: grid;
+      place-items: center;
+      cursor: default;
+      background:
+        radial-gradient(circle at 50% 25%, rgba(124, 92, 255, 0.35), transparent 46%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05));
+    }
+
+    .coming-soon-card::after {
+      background: linear-gradient(to top, rgba(4, 7, 16, 0.78), rgba(4, 7, 16, 0.38));
+    }
+
+    .coming-soon-card .app-info {
+      align-self: center;
+      text-align: center;
+    }
+
+    .coming-soon-card .app-info h3 {
+      margin: 0;
+      color: #dce4ff;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
     .site-footer {
       border-top: 1px solid var(--line);
       background: rgba(7, 10, 18, 0.72);
@@ -767,6 +791,12 @@
             </div>
           </a>
         </article>
+
+        <article class="app-card coming-soon-card" aria-label="Coming soon">
+          <div class="app-info">
+            <h3 data-i18n="comingSoon">coming soon...</h3>
+          </div>
+        </article>
       </div>
     </section>
   </main>
@@ -808,6 +838,7 @@
           focusKingTagline: "Stay sharp, King",
           focusQueenTagline: "Stay slay, Queen",
           focusGardenTagline: "Grow with focus",
+          comingSoon: "coming soon...",
           privacyPolicy: "Privacy Policy",
           contactLabel: "Contact:"
         },
@@ -837,6 +868,7 @@
           focusKingTagline: "Bleib fokussiert, King",
           focusQueenTagline: "Bleib fokussiert, Queen",
           focusGardenTagline: "Fokussiert wachsen",
+          comingSoon: "coming soon...",
           privacyPolicy: "Datenschutzerklärung",
           contactLabel: "Kontakt:"
         }
