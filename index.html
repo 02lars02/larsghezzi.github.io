@@ -75,6 +75,19 @@
       display: block;
     }
 
+    .app-shot {
+      width: 100%;
+      aspect-ratio: 1024 / 500;
+      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+
+    .app-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .site-header {
       position: sticky;
       top: 0;
@@ -295,9 +308,10 @@
 
     .featured-grid img {
       width: 100%;
-      height: 100%;
-      min-height: 155px;
-      object-fit: cover;
+      aspect-ratio: 1024 / 500;
+      height: auto;
+      min-height: 0;
+      object-fit: contain;
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.16);
       box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
@@ -338,14 +352,13 @@
 
     .apps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
       gap: clamp(16px, 2.4vw, 24px);
     }
 
     .app-card {
       position: relative;
       isolation: isolate;
-      min-height: 275px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -362,39 +375,30 @@
     }
 
     .app-card a {
-      display: grid;
-      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       color: var(--text);
     }
 
     .app-card img {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: var(--bg-soft);
-      transition: transform 260ms ease, filter 260ms ease;
+      transition: filter 260ms ease;
     }
 
     .app-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(to top, rgba(4, 7, 16, 0.94) 0%, rgba(4, 7, 16, 0.56) 44%, rgba(4, 7, 16, 0.06) 100%);
+      display: none;
     }
 
     .app-card:hover img,
     .app-card:focus-within img {
-      transform: scale(1.045);
       filter: saturate(1.12);
     }
 
     .app-info {
-      align-self: end;
-      padding: 20px;
+      margin-top: auto;
+      padding: 18px 20px 20px;
+      background: linear-gradient(180deg, rgba(16, 22, 36, 0.82), rgba(7, 10, 18, 0.96));
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .app-info h3 {
@@ -425,6 +429,7 @@
 
     .coming-soon-card {
       display: grid;
+      min-height: 245px;
       place-items: center;
       cursor: default;
       background:
@@ -559,9 +564,6 @@
         grid-template-columns: 1fr;
       }
 
-      .app-card {
-        min-height: 235px;
-      }
 
       .footer-inner {
         flex-direction: column;
@@ -664,7 +666,7 @@
       <div class="apps-grid">
         <article class="app-card">
           <a href="govcraft.html">
-            <img src="pic/govcraft.png" alt="GovCraft: President Simulator" loading="lazy">
+            <div class="app-shot"><img src="pic/govcraft.png" alt="GovCraft: President Simulator" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>GovCraft</h3>
               <span data-i18n="govcraftTagline">President Simulator</span>
@@ -674,7 +676,7 @@
 		
 		<article class="app-card">
           <a href="skyempire.html">
-            <img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon" loading="lazy">
+            <div class="app-shot"><img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Sky Empire</h3>
               <span data-i18n="skyEmpireTagline">Airline Tycoon</span>
@@ -684,7 +686,7 @@
 
         <article class="app-card">
           <a href="musictycoon.html">
-            <img src="pic/musictycoon.png" alt="Music Tycoon" loading="lazy">
+            <div class="app-shot"><img src="pic/musictycoon.png" alt="Music Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Music Tycoon</h3>
               <span data-i18n="musicTycoonTagline">Label Manager</span>
@@ -694,7 +696,7 @@
 
         <article class="app-card">
           <a href="yourhonor.html">
-            <img src="pic/honor.png" alt="Your Honor" loading="lazy">
+            <div class="app-shot"><img src="pic/honor.png" alt="Your Honor" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Your Honor</h3>
               <span data-i18n="yourHonorTagline">Judge Simulator</span>
@@ -704,7 +706,7 @@
 
         <article class="app-card">
           <a href="wardentycoon.html">
-            <img src="pic/warden.png" alt="Warden Tycoon" loading="lazy">
+            <div class="app-shot"><img src="pic/warden.png" alt="Warden Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Warden Tycoon</h3>
               <span data-i18n="wardenTycoonTagline">Prison Manager</span>
@@ -714,7 +716,7 @@
 
         <article class="app-card">
           <a href="conclave.html">
-            <img src="pic/conclave.png" alt="Conclave" loading="lazy">
+            <div class="app-shot"><img src="pic/conclave.png" alt="Conclave" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Conclave</h3>
               <span data-i18n="conclaveTagline">Pope Simulator</span>
@@ -724,7 +726,7 @@
 
         <article class="app-card">
           <a href="mayorsim.html">
-            <img src="pic/mayorsim.png" alt="Mayor Sim" loading="lazy">
+            <div class="app-shot"><img src="pic/mayorsim.png" alt="Mayor Sim" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Mayor Sim</h3>
               <span data-i18n="mayorSimTagline">Run your city</span>
@@ -734,7 +736,7 @@
 		
 		<article class="app-card">
           <a href="spacetrader.html">
-            <img src="pic/spacetrader.png" alt="Stellar Dealer" loading="lazy">
+            <div class="app-shot"><img src="pic/spacetrader.png" alt="Stellar Dealer" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Stellar Dealer</h3>
               <span data-i18n="spaceTraderTagline">Space Trader</span>
@@ -744,7 +746,7 @@
 		
 		<article class="app-card">
           <a href="electioncraft.html">
-            <img src="pic/electioncraft.png" alt="ElectionCraft: Campaign Manager" loading="lazy">
+            <div class="app-shot"><img src="pic/electioncraft.png" alt="ElectionCraft: Campaign Manager" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>ElectionCraft</h3>
               <span data-i18n="ElectionCraftTagline">Campaign Manager</span>
@@ -754,7 +756,7 @@
 
         <article class="app-card">
           <a href="loop-looters.html">
-            <img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt" loading="lazy">
+            <div class="app-shot"><img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Loop Looters</h3>
               <span data-i18n="loopLootersTagline">Echo Hunt</span>
@@ -764,7 +766,7 @@
 
         <article class="app-card">
           <a href="foldings.html">
-            <img src="pic/foldings.png" alt="Foldings: Puzzle Runner" loading="lazy">
+            <div class="app-shot"><img src="pic/foldings.png" alt="Foldings: Puzzle Runner" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Foldings</h3>
               <span data-i18n="foldingsTagline">Puzzle Runner</span>
@@ -774,7 +776,7 @@
 
         <article class="app-card">
           <a href="airlineops.html">
-            <img src="pic/airops.png" alt="AirlineOps: Schedule Manager" loading="lazy">
+            <div class="app-shot"><img src="pic/airops.png" alt="AirlineOps: Schedule Manager" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>AirlineCeo</h3>
               <span data-i18n="airlineCeoTagline">Schedule Manager</span>
@@ -784,7 +786,7 @@
 
         <article class="app-card">
           <a href="focus-king.html">
-            <img src="pic/king.png" alt="Focus King" loading="lazy">
+            <div class="app-shot"><img src="pic/king.png" alt="Focus King" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus King</h3>
               <span data-i18n="focusKingTagline">Stay sharp, King</span>
@@ -794,7 +796,7 @@
 
         <article class="app-card">
           <a href="focus-queen.html">
-            <img src="pic/queen.png" alt="Focus Queen" loading="lazy">
+            <div class="app-shot"><img src="pic/queen.png" alt="Focus Queen" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus Queen</h3>
               <span data-i18n="focusQueenTagline">Stay slay, Queen</span>
@@ -804,7 +806,7 @@
 
         <article class="app-card">
           <a href="focus-garden.html">
-            <img src="pic/garden.png" alt="Focus Garden" loading="lazy">
+            <div class="app-shot"><img src="pic/garden.png" alt="Focus Garden" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus Garden</h3>
               <span data-i18n="focusGardenTagline">Grow with focus</span>
@@ -812,11 +814,6 @@
           </a>
         </article>
 
-        <article class="app-card coming-soon-card" aria-label="Coming soon">
-          <div class="app-info">
-            <h3 data-i18n="comingSoon">coming soon...</h3>
-          </div>
-        </article>
       </div>
     </section>
   </main>

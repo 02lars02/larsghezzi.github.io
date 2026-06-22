@@ -85,8 +85,11 @@ main {
 .slide img {
     width: 100%;
     max-width: 1024px;
+    aspect-ratio: 1024 / 500; /* Standardformat der App-Bilder */
+    height: auto;
     max-height: 65vh; /* Das Bild nutzt bis zu 65% der Bildschirmhöhe -> minimiert den Weißraum */
     object-fit: contain; /* Bild wird immer im korrekten Seitenverhältnis und vollständig angezeigt */
+    background: #101624;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
