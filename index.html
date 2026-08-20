@@ -120,52 +120,6 @@
       filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.32));
     }
 
-
-
-    .nav-actions {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: auto;
-    }
-
-    .language-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-    }
-
-    .language-option {
-      border: 0;
-      border-radius: 999px;
-      padding: 8px 11px;
-      color: var(--muted);
-      background: transparent;
-      font: inherit;
-      font-size: 0.84rem;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
-    }
-
-    .language-option:hover,
-    .language-option:focus-visible {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.1);
-      outline: none;
-    }
-
-    .language-option[aria-pressed="true"] {
-      color: #06110e;
-      background: var(--accent-2);
-    }
-
     .store-button,
     .hero-button {
       display: inline-flex;
@@ -281,47 +235,6 @@
       outline: none;
     }
 
-    .hero-panel {
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: clamp(18px, 3vw, 26px);
-      background: linear-gradient(145deg, rgba(255,255,255,0.14), rgba(255,255,255,0.05));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      inset: -25%;
-      background: radial-gradient(circle, rgba(124, 92, 255, 0.34), transparent 58%);
-      transform: translate(28%, -22%);
-    }
-
-    .featured-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 14px;
-    }
-
-    .featured-grid img {
-      width: 100%;
-      aspect-ratio: 1024 / 500;
-      height: auto;
-      min-height: 0;
-      object-fit: contain;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .featured-grid a:first-child {
-      grid-row: span 2;
-    }
-
     .apps-section {
       width: min(var(--max-width), calc(100% - 32px));
       margin: 0 auto;
@@ -385,10 +298,6 @@
       transition: filter 260ms ease;
     }
 
-    .app-card::after {
-      display: none;
-    }
-
     .app-card:hover img,
     .app-card:focus-within img {
       filter: saturate(1.12);
@@ -427,31 +336,6 @@
       transform: translateX(4px);
     }
 
-    .coming-soon-card {
-      display: grid;
-      min-height: 245px;
-      place-items: center;
-      cursor: default;
-      background:
-        radial-gradient(circle at 50% 25%, rgba(124, 92, 255, 0.35), transparent 46%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05));
-    }
-
-    .coming-soon-card::after {
-      background: linear-gradient(to top, rgba(4, 7, 16, 0.78), rgba(4, 7, 16, 0.38));
-    }
-
-    .coming-soon-card .app-info {
-      align-self: center;
-      text-align: center;
-    }
-
-    .coming-soon-card .app-info h3 {
-      margin: 0;
-      color: #dce4ff;
-      font-size: clamp(1.45rem, 3vw, 2rem);
-    }
-
     .site-footer {
       border-top: 1px solid var(--line);
       background: rgba(7, 10, 18, 0.72);
@@ -484,25 +368,9 @@
       outline: none;
     }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
     @media (max-width: 860px) {
       .hero {
         grid-template-columns: 1fr;
-      }
-
-      .hero-panel {
-        order: -1;
       }
 
       .section-heading {
@@ -515,15 +383,6 @@
       .nav {
         min-height: 68px;
         width: min(100% - 24px, var(--max-width));
-      }
-
-      .nav-actions {
-        gap: 8px;
-      }
-
-      .language-option {
-        padding: 7px 9px;
-        font-size: 0.78rem;
       }
 
       .store-button {
@@ -550,27 +409,15 @@
         width: 100%;
       }
 
-      .featured-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .featured-grid img {
-        min-height: 110px;
-        border-radius: 16px;
-      }
-
       .apps-grid {
         grid-template-columns: 1fr;
       }
-
 
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
       }
     }
-
 
     @media (max-width: 420px) {
       .header-logo {
@@ -582,21 +429,6 @@
         width: min(100% - 20px, var(--max-width));
       }
 
-      .nav-actions {
-        gap: 5px;
-        flex-shrink: 0;
-      }
-
-      .language-switch {
-        gap: 2px;
-        padding: 3px;
-      }
-
-      .language-option {
-        padding: 6px 7px;
-        font-size: 0.72rem;
-      }
-
       .store-button {
         padding: 8px 10px;
         font-size: 0.88rem;
@@ -606,10 +438,6 @@
     @media (max-width: 340px) {
       .header-logo {
         width: 104px;
-      }
-
-      .language-option {
-        padding: 5px 6px;
       }
 
       .store-button {
@@ -628,29 +456,23 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
-      <a class="brand" href="index.html" aria-label="Lars Ghezzi homepage" data-i18n-aria-label="brandLabel">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Lars Ghezzi homepage">
         <img src="pic/logo.png" alt="Lars Ghezzi" class="header-logo">
       </a>
-      <div class="nav-actions">
-        <div class="language-switch" role="group" aria-label="Language selection" data-i18n-aria-label="languageSelection">
-          <button type="button" class="language-option" data-language="en" aria-pressed="true">EN</button>
-          <button type="button" class="language-option" data-language="de" aria-pressed="false">DE</button>
-        </div>
-        <a href="redirect.html" class="store-button" data-i18n="store">Store</a>
-      </div>
+      <a href="redirect.html" class="store-button">Store</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <p class="eyebrow" data-i18n="heroEyebrow">Indie Apps & Games</p>
-        <h1 id="hero-title" data-i18n-html="heroTitle">All apps <span>at a glance.</span></h1>
-        <p class="hero-copy" data-i18n="heroCopy">Discover strategy, tycoon, puzzle and focus apps.</p>
+        <p class="eyebrow">Indie Apps & Games</p>
+        <h1 id="hero-title">All apps <span>at a glance.</span></h1>
+        <p class="hero-copy">Discover strategy, tycoon, puzzle and focus apps.</p>
         <div class="hero-actions">
-          <a href="#apps" class="hero-button" data-i18n="discoverApps">Discover apps</a>
-          <a href="redirect.html" class="secondary-link" data-i18n="goToStore">Go to Store</a>
+          <a href="#apps" class="hero-button">Discover apps</a>
+          <a href="redirect.html" class="secondary-link">Go to Store</a>
         </div>
       </div>
     </section>
@@ -658,8 +480,8 @@
     <section class="apps-section" id="apps" aria-labelledby="apps-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow" data-i18n="portfolioEyebrow">Portfolio</p>
-          <h2 id="apps-title" data-i18n="appsTitle">Apps & Games</h2>
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="apps-title">Apps & Games</h2>
         </div>
       </div>
 
@@ -669,147 +491,133 @@
             <div class="app-shot"><img src="pic/govcraft.png" alt="GovCraft: President Simulator" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>GovCraft</h3>
-              <span data-i18n="govcraftTagline">President Simulator</span>
+              <span>President Simulator</span>
             </div>
           </a>
         </article>
-		
-		<article class="app-card">
+        <article class="app-card">
           <a href="skyempire.html">
             <div class="app-shot"><img src="pic/skyempire.png" alt="Sky Empire: Airline Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Sky Empire</h3>
-              <span data-i18n="skyEmpireTagline">Airline Tycoon</span>
+              <span>Airline Tycoon</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="musictycoon.html">
             <div class="app-shot"><img src="pic/musictycoon.png" alt="Music Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Music Tycoon</h3>
-              <span data-i18n="musicTycoonTagline">Label Manager</span>
+              <span>Label Manager</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="yourhonor.html">
             <div class="app-shot"><img src="pic/honor.png" alt="Your Honor" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Your Honor</h3>
-              <span data-i18n="yourHonorTagline">Judge Simulator</span>
+              <span>Judge Simulator</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="wardentycoon.html">
             <div class="app-shot"><img src="pic/warden.png" alt="Warden Tycoon" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Warden Tycoon</h3>
-              <span data-i18n="wardenTycoonTagline">Prison Manager</span>
+              <span>Prison Manager</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="conclave.html">
             <div class="app-shot"><img src="pic/conclave.png" alt="Conclave" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Conclave</h3>
-              <span data-i18n="conclaveTagline">Pope Simulator</span>
+              <span>Pope Simulator</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="mayorsim.html">
             <div class="app-shot"><img src="pic/mayorsim.png" alt="Mayor Sim" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Mayor Sim</h3>
-              <span data-i18n="mayorSimTagline">Run your city</span>
+              <span>Run your city</span>
             </div>
           </a>
         </article>
-		
-		<article class="app-card">
+        <article class="app-card">
           <a href="spacetrader.html">
             <div class="app-shot"><img src="pic/spacetrader.png" alt="Stellar Dealer" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Stellar Dealer</h3>
-              <span data-i18n="spaceTraderTagline">Space Trader</span>
+              <span>Space Trader</span>
             </div>
           </a>
         </article>
-		
-		<article class="app-card">
+        <article class="app-card">
           <a href="electioncraft.html">
             <div class="app-shot"><img src="pic/electioncraft.png" alt="ElectionCraft: Campaign Manager" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>ElectionCraft</h3>
-              <span data-i18n="ElectionCraftTagline">Campaign Manager</span>
+              <span>Campaign Manager</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="loop-looters.html">
             <div class="app-shot"><img src="pic/loop_looters.png" alt="Loop Looters: Echo Hunt" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Loop Looters</h3>
-              <span data-i18n="loopLootersTagline">Echo Hunt</span>
+              <span>Echo Hunt</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="foldings.html">
             <div class="app-shot"><img src="pic/foldings.png" alt="Foldings: Puzzle Runner" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Foldings</h3>
-              <span data-i18n="foldingsTagline">Puzzle Runner</span>
+              <span>Puzzle Runner</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="airlineops.html">
             <div class="app-shot"><img src="pic/airops.png" alt="AirlineOps: Schedule Manager" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>AirlineCeo</h3>
-              <span data-i18n="airlineCeoTagline">Schedule Manager</span>
+              <span>Schedule Manager</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="focus-king.html">
             <div class="app-shot"><img src="pic/king.png" alt="Focus King" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus King</h3>
-              <span data-i18n="focusKingTagline">Stay sharp, King</span>
+              <span>Stay sharp, King</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="focus-queen.html">
             <div class="app-shot"><img src="pic/queen.png" alt="Focus Queen" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus Queen</h3>
-              <span data-i18n="focusQueenTagline">Stay slay, Queen</span>
+              <span>Stay slay, Queen</span>
             </div>
           </a>
         </article>
-
         <article class="app-card">
           <a href="focus-garden.html">
             <div class="app-shot"><img src="pic/garden.png" alt="Focus Garden" loading="lazy" width="1024" height="500"></div>
             <div class="app-info">
               <h3>Focus Garden</h3>
-              <span data-i18n="focusGardenTagline">Grow with focus</span>
+              <span>Grow with focus</span>
             </div>
           </a>
         </article>
@@ -820,147 +628,9 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p><a href="privacy-policy.html" class="footer-link" data-i18n="privacyPolicy">Privacy Policy</a></p>
-      <p><span data-i18n="contactLabel">Contact:</span> <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
+      <p><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></p>
+      <p><span>Contact:</span> <a href="mailto:support.larsghezzi@gmail.com" class="footer-link">support.larsghezzi@gmail.com</a></p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      const DEFAULT_LANGUAGE = "en";
-      const translations = {
-        en: {
-          pageDescription: "Apps and games by Lars Ghezzi – all projects at a glance.",
-          mainNavigation: "Main navigation",
-          brandLabel: "Lars Ghezzi homepage",
-          languageSelection: "Language selection",
-          store: "Store",
-          heroEyebrow: "Indie Apps & Games",
-          heroTitle: "All apps <span>at a glance.</span>",
-          heroCopy: "Discover strategy, tycoon, puzzle and focus apps.",
-          discoverApps: "Discover apps",
-          goToStore: "Go to Store",
-          portfolioEyebrow: "Portfolio",
-          appsTitle: "Apps & Games",
-          govcraftTagline: "President Simulator",
-          musicTycoonTagline: "Label Manager",
-          yourHonorTagline: "Judge Simulator",
-          wardenTycoonTagline: "Prison Manager",
-          conclaveTagline: "Pope Simulator",
-          mayorSimTagline: "Run your city",
-		  spaceTraderTagline: "Space Trader",
-          skyEmpireTagline: "Airline Tycoon",
-		  ElectionCraftTagline: "Campaign Manager",
-          loopLootersTagline: "Echo Hunt",
-          foldingsTagline: "Puzzle Runner",
-          airlineCeoTagline: "Schedule Manager",
-          focusKingTagline: "Stay sharp, King",
-          focusQueenTagline: "Stay slay, Queen",
-          focusGardenTagline: "Grow with focus",
-          comingSoon: "coming soon...",
-          privacyPolicy: "Privacy Policy",
-          contactLabel: "Contact:"
-        },
-        de: {
-          pageDescription: "Apps und Games von Lars Ghezzi – alle Projekte auf einen Blick.",
-          mainNavigation: "Hauptnavigation",
-          brandLabel: "Lars Ghezzi Startseite",
-          languageSelection: "Sprachauswahl",
-          store: "Store",
-          heroEyebrow: "Indie Apps & Games",
-          heroTitle: "Alle Apps <span>auf einen Blick.</span>",
-          heroCopy: "Entdecke Strategie-, Tycoon-, Puzzle- und Fokus-Apps.",
-          discoverApps: "Apps entdecken",
-          goToStore: "Zum Store",
-          portfolioEyebrow: "Portfolio",
-          appsTitle: "Apps & Games",
-          govcraftTagline: "Präsidenten-Simulator",
-          musicTycoonTagline: "Label-Manager",
-          yourHonorTagline: "Richter-Simulator",
-          wardenTycoonTagline: "Gefängnis-Manager",
-          conclaveTagline: "Papst-Simulator",
-          mayorSimTagline: "Leite deine Stadt",
-		  spaceTraderTagline: "Weltraumhändler",
-          skyEmpireTagline: "Airline-Tycoon",
-		  ElectionCraftTagline: "Kampagnenleiter",
-          loopLootersTagline: "Echo-Jagd",
-          foldingsTagline: "Puzzle-Runner",
-          airlineCeoTagline: "Flugplan-Manager",
-          focusKingTagline: "Bleib fokussiert, King",
-          focusQueenTagline: "Bleib fokussiert, Queen",
-          focusGardenTagline: "Fokussiert wachsen",
-          comingSoon: "coming soon...",
-          privacyPolicy: "Datenschutzerklärung",
-          contactLabel: "Kontakt:"
-        }
-      };
-
-      function setText(selector, dictionary, key, useHTML) {
-        document.querySelectorAll(selector).forEach(function (element) {
-          if (!dictionary[key]) return;
-          if (useHTML) {
-            element.innerHTML = dictionary[key];
-          } else {
-            element.textContent = dictionary[key];
-          }
-        });
-      }
-
-      const LANGUAGE_STORAGE_KEY = "preferredLanguageV2";
-
-      function setLanguage(language) {
-        const activeLanguage = translations[language] ? language : DEFAULT_LANGUAGE;
-        const dictionary = translations[activeLanguage];
-
-        document.documentElement.lang = activeLanguage;
-        document.querySelector('meta[name="description"]').setAttribute("content", dictionary.pageDescription);
-
-        document.querySelectorAll("[data-i18n]").forEach(function (element) {
-          const key = element.getAttribute("data-i18n");
-          if (dictionary[key]) element.textContent = dictionary[key];
-        });
-
-        document.querySelectorAll("[data-i18n-html]").forEach(function (element) {
-          const key = element.getAttribute("data-i18n-html");
-          if (dictionary[key]) element.innerHTML = dictionary[key];
-        });
-
-        document.querySelectorAll("[data-i18n-aria-label]").forEach(function (element) {
-          const key = element.getAttribute("data-i18n-aria-label");
-          if (dictionary[key]) element.setAttribute("aria-label", dictionary[key]);
-        });
-
-        document.querySelectorAll(".language-option").forEach(function (button) {
-          const isActive = button.getAttribute("data-language") === activeLanguage;
-          button.setAttribute("aria-pressed", String(isActive));
-        });
-
-        try {
-          localStorage.setItem(LANGUAGE_STORAGE_KEY, activeLanguage);
-        } catch (error) {
-          // localStorage can be disabled; the site still works with the default language.
-        }
-      }
-
-      document.querySelectorAll(".language-option").forEach(function (button) {
-        button.addEventListener("click", function () {
-          setLanguage(button.getAttribute("data-language"));
-        });
-      });
-
-      function getInitialLanguage() {
-        try {
-          const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-          if (translations[savedLanguage]) return savedLanguage;
-        } catch (error) {
-          // localStorage can be disabled; fall back to the default language.
-        }
-
-        return DEFAULT_LANGUAGE;
-      }
-
-      setLanguage(getInitialLanguage());
-    }());
-  </script>
 </body>
 </html>
