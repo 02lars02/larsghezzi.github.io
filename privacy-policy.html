@@ -1,400 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy – Lars Ghezzi Mobile Applications</title>
-    <meta name="description" content="Privacy Policy for mobile applications developed and published by Lars Ghezzi on Google Play and the Apple App Store.">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.65;
-            color: #333;
-            max-width: 860px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 8px;
-        }
-        h2 {
-            margin-top: 32px;
-            color: #444;
-        }
-        h3 {
-            margin-top: 24px;
-            color: #555;
-        }
-        ul {
-            padding-left: 22px;
-        }
-        li {
-            margin-bottom: 7px;
-        }
-        a {
-            color: #0069c2;
-        }
-        .summary {
-            background: #f6f8fa;
-            padding: 16px 18px;
-            border-left: 4px solid #007bff;
-            margin: 18px 0 26px;
-        }
-        .apps {
-            columns: 2;
-            column-gap: 38px;
-        }
-        .apps li {
-            break-inside: avoid;
-        }
-        .contact-info {
-            background: #f9f9f9;
-            padding: 16px 18px;
-            border-left: 4px solid #007bff;
-            margin-top: 26px;
-        }
-        .muted {
-            color: #666;
-        }
-        @media (max-width: 650px) {
-            .apps {
-                columns: 1;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – Lars Ghezzi Mobile Applications</title>
+  <meta name="description" content="Privacy Policy for mobile applications developed and published by Lars Ghezzi on Google Play and the Apple App Store.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #24292f;
+      --muted: #57606a;
+      --border: #d8dee4;
+      --panel: #f6f8fa;
+      --accent: #0969da;
+      --table-alt: #fbfcfd;
+    }
 
-    <!-- Google tag (gtag.js) used on this website -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMD860S21J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VMD860S21J');
-    </script>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --border: #30363d;
+        --panel: #161b22;
+        --accent: #58a6ff;
+        --table-alt: #11161d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 42px 22px 64px;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin-top: 38px;
+      padding-top: 2px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin-top: 26px;
+      line-height: 1.35;
+    }
+
+    a { color: var(--accent); }
+
+    .meta, .muted { color: var(--muted); }
+
+    .summary, .contact, .note {
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      padding: 16px 18px;
+      margin: 20px 0 28px;
+      border-radius: 3px;
+    }
+
+    ul, ol { padding-left: 24px; }
+    li { margin-bottom: 7px; }
+
+    .apps {
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .apps li { break-inside: avoid; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0 26px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 11px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th { background: var(--panel); }
+    tbody tr:nth-child(even) td { background: var(--table-alt); }
+
+    .small { font-size: 0.94rem; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    @media (max-width: 680px) {
+      main { padding: 28px 16px 48px; }
+      .apps { columns: 1; }
+    }
+  </style>
 </head>
 <body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">
+    <strong>Developer and privacy contact:</strong> Lars Ghezzi<br>
+    <strong>Last updated:</strong> September 22, 2026
+  </p>
 
-    <h1>Privacy Policy</h1>
-    <p class="muted"><strong>Developer:</strong> Lars Ghezzi<br>
-    <strong>Last updated:</strong> September 22, 2026</p>
+  <div class="summary">
+    <p><strong>Summary.</strong> The mobile applications covered by this policy are designed to work primarily with data stored locally on your device. They do not require a Lars Ghezzi account for ordinary use, and I do not operate a general cloud database that stores normal game progress.</p>
+    <p>Depending on the app, platform, and features you use, third-party services may process limited device, advertising, purchase, diagnostic, or game-service information. These services can include Google AdMob, Apple App Store services, Google Play services, Apple Game Center, and Google Play Games.</p>
+    <p>The current versions covered by this policy do not request precise GPS location, contacts, camera, microphone, or photo-library access for ordinary gameplay.</p>
+  </div>
 
-    <div class="summary">
-        <p>
-            This Privacy Policy applies to the mobile applications developed and published by
-            <strong>Lars Ghezzi</strong> and listed below, including versions distributed through
-            Google Play and the Apple App Store. It explains what information is stored on your device,
-            what information may be processed by platform or advertising services, why that processing occurs,
-            when information may be shared with service providers, how long information may be retained,
-            and the privacy choices available to you.
-        </p>
-        <p>
-            In general, normal game progress and settings are stored locally on your device. The Applications
-            do not require a account for normal use. Depending on the Application and platform,
-            the Applications may also use Google AdMob for advertising, Apple or Google in-app purchase services,
-            local notifications, and platform game services such as Apple Game Center or Google Play Games.
-        </p>
-    </div>
+  <h2>1. Who Is Responsible for This Policy</h2>
+  <p>
+    This Privacy Policy describes the privacy practices of mobile applications developed and published by
+    <strong>Lars Ghezzi</strong> ("I", "me", or "my").
+  </p>
+  <p>
+    For personal information that I handle directly in connection with the Applications, Lars Ghezzi is the person responsible for that processing. Third-party platforms and service providers may separately process information under their own privacy policies, terms, and legal responsibilities.
+  </p>
 
-    <h2>Applications Covered by This Privacy Policy</h2>
-    <p>This Privacy Policy applies to the following applications published by <strong>Lars Ghezzi</strong>:</p>
-    <ul class="apps">
-        <li>GovCraft: President Simulator</li>
-        <li>Hotel Empire: Tycoon Manager</li>
-        <li>Music Tycoon: Label Manager</li>
-        <li>Warden Tycoon: Prison Manager</li>
-        <li>Your Honor: Judge Simulator</li>
-        <li>Sky Empire: Airline Manager</li>
-        <li>Mayor Simulator: Run Your City</li>
-        <li>AirlineCEO: Schedule Manager</li>
-        <li>ElectionCraft: CampaignManager</li>
-        <li>Stellar Dealer: Space Trader</li>
-        <li>Conclave: Pope Simulator</li>
-        <li>Focus Garden: Time your Growth</li>
-        <li>Foldings: Puzzle Runner</li>
-        <li>Focus King: Stay sharp King</li>
-        <li>Focus Queen: Stay slay Queen</li>
-        <li>Loop Looters: Echo Hunt</li>
-    </ul>
+  <h2>2. Applications Covered by This Policy</h2>
+  <p>This Privacy Policy applies to the following applications:</p>
+  <ul class="apps">
+    <li>GovCraft: President Simulator</li>
+    <li>Hotel Empire: Tycoon Manager</li>
+    <li>Music Tycoon: Label Manager</li>
+    <li>Warden Tycoon: Prison Manager</li>
+    <li>Your Honor: Judge Simulator</li>
+    <li>Sky Empire: Airline Manager</li>
+    <li>Mayor Simulator: Run Your City</li>
+    <li>AirlineCEO: Schedule Manager</li>
+    <li>ElectionCraft: CampaignManager</li>
+    <li>Stellar Dealer: Space Trader</li>
+    <li>Conclave: Pope Simulator</li>
+    <li>Focus Garden: Time your Growth</li>
+    <li>Foldings: Puzzle Runner</li>
+    <li>Focus King: Stay sharp King</li>
+    <li>Focus Queen: Stay slay Queen</li>
+    <li>Loop Looters: Echo Hunt</li>
+  </ul>
+  <p>
+    Not every Application uses every feature or service described below. The exact processing for a particular Application depends on its platform, enabled features, advertising configuration, purchases, game-service integrations, region, and your privacy choices.
+  </p>
 
-    <p>
-        Not every Application uses every feature or service described below. The exact processing for a specific
-        Application depends on its platform, enabled features, permissions, region, advertising configuration,
-        purchase configuration, and third-party services. If a future version introduces a materially different
-        data practice, this Privacy Policy and the relevant store privacy disclosures will be updated as appropriate.
-    </p>
+  <h2>3. Service Overview</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature or service</th>
+          <th>When it applies</th>
+          <th>Typical purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Local device storage</td>
+          <td>Normal use of the Applications</td>
+          <td>Game progress, settings, unlocks, statistics, preferences, and local entitlement state</td>
+        </tr>
+        <tr>
+          <td>Google AdMob</td>
+          <td>Ad-supported versions or features</td>
+          <td>Displaying, limiting, protecting, measuring, and where permitted personalizing advertising</td>
+        </tr>
+        <tr>
+          <td>Apple App Store / Google Play billing</td>
+          <td>When purchases or premium upgrades are offered</td>
+          <td>Processing purchases, validating transactions, and restoring entitlements</td>
+        </tr>
+        <tr>
+          <td>Local notifications</td>
+          <td>When an Application provides reminders, timers, events, or return prompts</td>
+          <td>Scheduling notifications on your device</td>
+        </tr>
+        <tr>
+          <td>Apple Game Center / Google Play Games</td>
+          <td>Only in Applications that integrate those services</td>
+          <td>Platform sign-in, achievements, leaderboards, or similar game features</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <h2>Data Stored Locally on Your Device</h2>
-    <p>
-        The Applications may store information locally on your device so that the game or utility can function.
-        This local information can include:
-    </p>
-    <ul>
-        <li><strong>Game progress and save data</strong>, such as completed levels, career or simulation progress, scores, achievements, unlocks, inventory, statistics, and other gameplay state.</li>
-        <li><strong>Preferences and settings</strong>, such as sound settings, notification preferences, language or display choices, tutorial status, and other configuration values.</li>
-        <li><strong>Purchase-related status</strong>, such as whether a premium feature or entitlement has been unlocked, when needed to provide purchased functionality.</li>
-        <li><strong>Local gameplay or diagnostic counters</strong> used by some Applications to operate features or help understand game state. Unless a third-party service is explicitly used, this information remains on the device.</li>
-    </ul>
-    <p>
-        Depending on the Application, local information may be stored using platform preferences, local databases,
-        or files in the Application's storage area. Lars Ghezzi does not operate a general user-account system or
-        a developer-operated cloud database for normal game progress in the current Applications covered by this policy.
-    </p>
+  <h2>4. Information Stored Locally on Your Device</h2>
+  <p>The Applications may store information locally so that features work correctly. This can include:</p>
+  <ul>
+    <li><strong>Game and activity progress</strong>, such as completed levels, simulation or career progress, scores, achievements, unlocks, inventory, statistics, session state, and other gameplay information.</li>
+    <li><strong>Preferences and settings</strong>, such as sound settings, notification preferences, language or display choices, tutorial state, consent-related settings where applicable, and other configuration values.</li>
+    <li><strong>Purchase entitlement state</strong>, such as whether a premium feature or ad-removal entitlement has been unlocked.</li>
+    <li><strong>Local counters and diagnostic state</strong> used to operate features, manage gameplay, or troubleshoot local app behavior.</li>
+  </ul>
+  <p>
+    This information may be stored in preferences, local databases, or files in the Application's storage area. I do not operate a general user-account system or developer-operated cloud database for normal game saves in the current Applications covered by this policy.
+  </p>
 
-    <h2>Information Processed Through the Application</h2>
-    <p>
-        When a third-party service is enabled, the Application or that service may process technical or usage information
-        needed to provide its function. Depending on the Application, platform, consent choices, and service configuration,
-        this can include:
-    </p>
-    <ul>
-        <li><strong>Device and other identifiers</strong>, including an advertising identifier or similar identifier where available, permitted, and required for advertising or measurement.</li>
-        <li><strong>Internet and network information</strong>, including Internet Protocol (IP) address, connection status, and related network information needed for online services.</li>
-        <li><strong>App activity and advertising interaction information</strong>, such as ad impressions, clicks, interactions, session-related information, and events necessary to provide or measure advertising.</li>
-        <li><strong>Device and technical information</strong>, such as device type, operating system version, language, app version, and general technical information.</li>
-        <li><strong>Crash, diagnostic, and performance information</strong> where collected by a platform or enabled service to maintain stability, diagnose errors, prevent abuse, or improve service operation.</li>
-        <li><strong>Purchase information</strong>, such as the product purchased, transaction status, purchase receipt or token, and entitlement status, as processed by Apple App Store or Google Play purchase systems.</li>
-        <li><strong>Game-service information</strong> in Applications that use Apple Game Center or Google Play Games, such as sign-in status, platform game account information made available by the service, achievements, and leaderboard scores.</li>
-    </ul>
+  <h2>5. Information That Third-Party Services May Process</h2>
+  <p>
+    When an Application uses an online platform or third-party service, that service may process information needed to provide its function. Depending on the Application, platform, region, consent choices, and service configuration, this may include:
+  </p>
+  <ul>
+    <li><strong>Device and advertising identifiers</strong>, such as an advertising identifier or similar identifier where available and permitted.</li>
+    <li><strong>Network information</strong>, including Internet Protocol (IP) address and connection-related information required to communicate with online services.</li>
+    <li><strong>Advertising activity</strong>, such as ad requests, impressions, clicks, interactions, frequency information, and measurement events.</li>
+    <li><strong>Device and technical information</strong>, such as device type, operating-system version, language, app version, and technical configuration.</li>
+    <li><strong>Approximate location</strong> inferred by a service from IP address or similar network information. The Applications do not request precise GPS location for normal functionality.</li>
+    <li><strong>Crash, diagnostic, security, and performance information</strong> where collected by a platform or enabled service.</li>
+    <li><strong>Purchase information</strong>, such as the product purchased, transaction status, receipt or purchase token, and entitlement status.</li>
+    <li><strong>Game-service information</strong>, such as platform sign-in status, achievements, leaderboard scores, or platform game-account information made available by Apple Game Center or Google Play Games.</li>
+  </ul>
 
-    <p>
-        This information may be used to provide and maintain the Applications, save or restore functionality,
-        complete purchases, deliver advertising, measure advertising, provide leaderboards or achievements,
-        prevent fraud or abuse, troubleshoot technical issues, maintain security, and improve the Applications.
-    </p>
+  <h2>6. Advertising and Consent</h2>
+  <p>
+    Some or all ad-supported versions of the Applications use <strong>Google AdMob</strong>. AdMob and participating advertising providers may process device identifiers, IP address, device information, advertising interactions, approximate location inferred from network information, and related information to serve, protect, limit, measure, and where permitted personalize advertising.
+  </p>
+  <p>
+    Whether advertising is personalized depends on factors such as your region, age-related settings, device settings, consent choices, and the Application's advertising configuration.
+  </p>
+  <p>
+    Where applicable law or advertising-platform rules require consent before particular advertising-related processing, the required consent choice must be obtained before that processing occurs. You may be given controls to accept, reject, or manage advertising choices, and those choices may affect whether personalized, non-personalized, contextual, or limited ads are shown.
+  </p>
 
-    <h3>Location Information</h3>
-    <p>
-        The current Applications covered by this policy do not intentionally request precise GPS location for their
-        normal functionality. Third-party services, including advertising or platform services, may derive an
-        <strong>approximate location</strong> from an IP address or similar network/device information according to their
-        own policies. If a future Application or feature requires precise location, it will request the relevant device
-        permission and the applicable store disclosure will be updated before that location is used.
-    </p>
+  <h3>Apple App Tracking Transparency</h3>
+  <p>
+    On Apple platforms, if an Application or advertising partner engages in tracking as defined by Apple, the Application uses Apple's <strong>App Tracking Transparency (ATT)</strong> framework before accessing the device's advertising identifier or engaging in tracking that requires permission. You can allow or deny this request and later change your choice in the privacy settings provided by iOS or iPadOS.
+  </p>
+  <p>
+    Denying tracking permission does not block the Application's core gameplay. Advertising may still be displayed, but it may be less personalized and some advertising measurement may be limited.
+  </p>
 
-    <h2>Advertising and Tracking</h2>
-    <p>
-        Some or all ad-supported versions of the Applications use <strong>Google AdMob</strong>. AdMob and its advertising
-        partners may process device identifiers, IP address, advertising interactions, device information, approximate
-        location inferred from network information, and other information described in Google's policies to provide,
-        limit, protect, measure, and, where permitted, personalize advertising.
-    </p>
-    <p>
-        Advertising may be personalized or non-personalized depending on your region, age-related settings,
-        consent choices, device settings, and the configuration of the Application. Where consent is required by law,
-        the relevant consent or platform mechanism should be presented before processing that requires consent.
-    </p>
-    <p>
-        On Apple platforms, if an Application or advertising partner engages in tracking as defined by Apple,
-        the Application uses Apple's <strong>App Tracking Transparency</strong> permission before accessing the device's
-        advertising identifier or engaging in tracking that requires permission. You can allow or deny this request and
-        later change it under <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong>. Denying tracking permission
-        does not prevent access to the Application's core functionality, although ads may be less personalized and some
-        advertising measurement may be limited.
-    </p>
+  <h2>7. In-App Purchases</h2>
+  <p>
+    Some Applications offer in-app purchases, premium upgrades, or ad-removal products. Purchases are processed by the store through which you obtained the Application, such as the Apple App Store or Google Play.
+  </p>
+  <p>
+    I do not receive or store your full payment-card or bank-account details. The Application may receive limited purchase-related information from the platform, such as a product identifier, transaction or purchase status, receipt or purchase token, and entitlement information so that purchased features can be delivered or restored.
+  </p>
+  <p>
+    Apple and Google process payment and purchase information under their own privacy policies, account settings, store terms, and legal obligations.
+  </p>
 
-    <h2>In-App Purchases</h2>
-    <p>
-        The Applications may offer in-app purchases or premium upgrades. Purchases are processed by the platform from
-        which you obtained the Application, such as the Apple App Store or Google Play. Lars Ghezzi does not receive or
-        store your full payment-card or bank-account information. The Application may receive purchase-related information
-        from the platform, such as a product identifier, transaction or purchase status, receipt or purchase token, and
-        entitlement information, so that purchased features can be delivered or restored.
-    </p>
-    <p>
-        Apple and Google process purchase and payment information according to their own privacy policies, account settings,
-        store terms, and legal obligations.
-    </p>
+  <h2>8. Notifications</h2>
+  <p>
+    The Applications may use <strong>local notifications</strong> for features such as reminders, timers, in-game events, or return-to-game prompts. Local notifications are scheduled by the Application on your device.
+  </p>
+  <p>
+    Where the operating system requires notification permission, the Application requests that permission. You can disable notifications at any time through your device settings.
+  </p>
+  <p>
+    The current Applications covered by this policy do not rely on a Lars Ghezzi-operated remote push-notification server for their standard notification functionality.
+  </p>
 
-    <h2>Notifications</h2>
-    <p>
-        The Applications may use <strong>local notifications</strong> for features such as reminders, timers, events,
-        or return-to-game prompts. Local notifications are scheduled by the Application on your device. Where the operating
-        system requires permission to show notifications, the Application requests that permission. You can disable
-        notifications at any time in your device settings.
-    </p>
-    <p>
-        The current Applications covered by this policy do not rely on a Lars Ghezzi-operated remote push-notification
-        server for their standard local notification functionality. If remote push notifications are added in a future
-        version, the related disclosure will be updated as appropriate.
-    </p>
+  <h2>9. Platform Game Services</h2>
+  <p>
+    Some Applications may integrate with <strong>Apple Game Center</strong> or <strong>Google Play Games</strong> for features such as platform sign-in, achievements, leaderboards, or similar game functionality.
+  </p>
+  <p>
+    If you use these features, Apple or Google may process information associated with your platform account and gameplay information submitted to the service. Their processing is governed by their own privacy policies and account settings.
+  </p>
 
-    <h2>Platform Game Services</h2>
-    <p>
-        Some Applications may integrate with <strong>Apple Game Center</strong> or <strong>Google Play Games</strong> for
-        features such as sign-in, leaderboards, achievements, or similar platform functionality. If you use these features,
-        Apple or Google may process information associated with your platform account and the gameplay information submitted
-        to the service, such as scores or achievements. This processing is governed by the applicable platform provider's
-        privacy policy and account settings.
-    </p>
+  <h2>10. Support Communications</h2>
+  <p>
+    If you contact me by email or another support channel, I may receive information you choose to provide, such as your email address, the contents of your message, screenshots, device or app information you include, and any other information necessary to respond.
+  </p>
+  <p>
+    I use support communications to answer requests, investigate problems, protect the Applications, and maintain appropriate records. I do not use support messages for unrelated advertising.
+  </p>
 
-    <h2>Sharing, Reviews, and External Links</h2>
-    <p>
-        Some Applications include features that open the device's system share sheet, an App Store or Google Play review
-        prompt, a developer store page, support page, or another external link. Information you choose to share through
-        another application is handled by the service or application you select. Store review and external website activity
-        is handled by the applicable platform or website under its own privacy terms.
-    </p>
+  <h2>11. Permissions</h2>
+  <p>
+    The Applications request device permissions only when needed for a feature or platform requirement. Current versions may request notification permission and, on Apple platforms, tracking permission through ATT.
+  </p>
+  <p>
+    The current versions covered by this policy do not request precise GPS location, contacts, camera, microphone, or photo-library access for ordinary gameplay.
+  </p>
+  <p>
+    You can revoke previously granted permissions through your device settings. Some features may no longer work as intended if a permission necessary for that feature is disabled.
+  </p>
 
-    <h2>Third-Party Services and Data Sharing</h2>
-    <p>
-        The Applications use or may use third-party platform and service providers to perform functions that Lars Ghezzi
-        cannot provide solely on-device. Depending on the Application and platform, these services can include:
-    </p>
-    <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>, including Google Play services and related Android platform services where applicable.</li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Google AdMob</a> for advertising where enabled.</li>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play / Google Play Games</a> for store, purchase, and game-service functionality where enabled.</li>
-        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>, including the App Store, StoreKit, Game Center, and related Apple platform services where applicable.</li>
-    </ul>
-    <p>
-        Information is shared with or processed by these providers only to the extent needed for the relevant service,
-        such as advertising, purchase processing, fraud prevention, service delivery, game services, diagnostics,
-        security, and related technical operations. These providers process information under their own terms,
-        privacy policies, and legal obligations.
-    </p>
-    <p>
-        <strong>Lars Ghezzi does not sell personal information for money.</strong> However, advertising providers may process
-        information for personalized or targeted advertising where permitted. Depending on the law that applies where you
-        live, this type of advertising-related disclosure or processing may be described legally as "sharing," "targeted
-        advertising," or a similar term. Your available controls depend on your region, device, consent choices, and the
-        Application's advertising configuration.
-    </p>
+  <h2>12. How Information Is Used</h2>
+  <p>Information described in this policy may be used to:</p>
+  <ul>
+    <li>provide and maintain the Applications and their features;</li>
+    <li>store local progress, settings, and entitlements;</li>
+    <li>process and restore purchases;</li>
+    <li>display and measure advertising;</li>
+    <li>provide achievements, leaderboards, and platform game services;</li>
+    <li>detect fraud, abuse, invalid traffic, or security problems;</li>
+    <li>diagnose technical problems and improve reliability;</li>
+    <li>respond to support requests; and</li>
+    <li>comply with applicable legal obligations.</li>
+  </ul>
 
-    <h2>Permissions and Consent</h2>
-    <p>
-        The Applications request system permissions only when a feature or platform requirement needs them. Depending on
-        the Application and operating system, this can include notification permission and Apple's tracking permission.
-        The current Applications do not require precise GPS location for normal operation.
-    </p>
-    <p>
-        You can revoke previously granted permissions in your device settings. On Apple devices, tracking permission can
-        generally be managed under <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong>. Notification and other
-        permissions can be managed through the Application's settings page or the privacy/notification settings provided
-        by your operating system.
-    </p>
+  <h2>13. Legal Bases Where Applicable</h2>
+  <p>
+    Where the GDPR, UK GDPR, or another law requires a legal basis for processing, the applicable basis depends on the specific activity and may include:
+  </p>
+  <ul>
+    <li><strong>Consent</strong>, for example where required for tracking, personalized advertising, certain advertising storage/access activities, or protected device permissions.</li>
+    <li><strong>Performance of a contract or requested service</strong>, for example to provide an Application feature, process or restore a purchase, or provide a service you choose to use.</li>
+    <li><strong>Legitimate interests</strong>, where permitted, such as protecting the Applications, preventing fraud or abuse, maintaining security, responding to support requests, and improving reliability, balanced against your rights and interests.</li>
+    <li><strong>Legal obligations</strong>, where processing or retention is necessary to comply with applicable law.</li>
+  </ul>
+  <p>
+    Where processing is based on consent, you may withdraw that consent at any time for future processing using the available consent, app, device, or account controls. Withdrawal does not affect the lawfulness of processing that occurred before withdrawal.
+  </p>
 
-    <h2>Legal Bases for Processing Where Applicable</h2>
-    <p>
-        Where laws such as the GDPR, UK GDPR, or similar privacy laws require a legal basis, processing may rely on one or
-        more of the following, depending on the specific activity:
-    </p>
-    <ul>
-        <li><strong>Consent</strong>, for example where consent is required for tracking, personalized advertising, or a protected device permission.</li>
-        <li><strong>Performance of a contract or requested service</strong>, for example to provide an Application, complete or restore a purchase, or provide a feature you choose to use.</li>
-        <li><strong>Legitimate interests</strong>, where permitted, such as maintaining security, preventing fraud or abuse, diagnosing problems, and improving reliability, balanced against your rights and interests.</li>
-        <li><strong>Legal obligations</strong>, where information must be processed or retained to comply with applicable law.</li>
-    </ul>
+  <h2>14. Third-Party Services and Data Sharing</h2>
+  <p>
+    I do not sell personal information for money. Information may be processed by or shared with platform and service providers only as needed for the relevant feature or service.
+  </p>
+  <p>Depending on the Application and platform, these providers may include:</p>
+  <ul>
+    <li>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>,
+      including Google Play and related platform services.
+    </li>
+    <li>
+      <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Google AdMob</a>
+      for advertising where enabled.
+    </li>
+    <li>
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>,
+      including the App Store, StoreKit, Game Center, and related Apple services.
+    </li>
+  </ul>
+  <p>
+    These providers may process information under their own terms and privacy policies. Some may act as independent controllers or businesses for parts of their processing rather than solely on my instructions.
+  </p>
+  <p>
+    Depending on the law that applies where you live, certain disclosures to advertising providers may be legally described as "sharing", "targeted advertising", or a similar concept even where no money is paid for personal information. Available choices depend on your region, device, consent settings, and the relevant Application's advertising configuration.
+  </p>
 
-    <h2>Data Retention and Deletion</h2>
-    <p>
-        Data stored only on your device generally remains there until it is overwritten by normal Application use,
-        deleted through an available in-app function, cleared through platform settings where supported, or removed when
-        you uninstall the Application. Reinstalling or restoring an Application can behave differently depending on the
-        operating system, backups, and platform services you use.
-    </p>
-    <p>
-        Information processed by Apple, Google, AdMob, Game Center, Google Play Games, or another third-party service is
-        retained according to that provider's own retention rules, account settings, and legal obligations. Lars Ghezzi
-        cannot directly delete information held solely by those providers, although you may have deletion or account-control
-        options through the relevant provider.
-    </p>
-    <p>
-        If Lars Ghezzi directly holds personal information about you, for example because you contacted support, you may
-        request access, correction, or deletion by using the contact information below. Information will be deleted when
-        reasonably possible unless retention is required or permitted for legal, security, fraud-prevention, accounting,
-        dispute-resolution, or other legitimate purposes.
-    </p>
+  <h2>15. International Processing and Transfers</h2>
+  <p>
+    Apple, Google, and other service providers operate internationally. As a result, information processed by those services may be handled in countries other than the country where you live.
+  </p>
+  <p>
+    Where applicable law requires safeguards for international transfers, the relevant transfer must rely on a legally recognized mechanism, such as an adequacy decision, approved contractual safeguards, or another lawful transfer mechanism. Details of the safeguards used by Apple and Google for their own processing are available in their privacy and legal documentation.
+  </p>
 
-    <h2>Your Privacy Choices and Rights</h2>
-    <p>
-        You can stop future collection through an Application by uninstalling it. Depending on your device, region,
-        Application, and platform, you may also be able to:
-    </p>
-    <ul>
-        <li>deny or revoke tracking permission;</li>
-        <li>manage notification permission;</li>
-        <li>manage advertising personalization or advertising identifiers through device or platform settings;</li>
-        <li>use non-personalized advertising choices where offered;</li>
-        <li>sign out of or manage Apple Game Center or Google Play Games through your platform account;</li>
-        <li>manage purchase history, subscriptions, or payment information through your Apple or Google account; and</li>
-        <li>delete local Application data by using available in-app/platform controls or uninstalling the Application.</li>
-    </ul>
-    <p>
-        Depending on where you live, applicable privacy law may also give you rights concerning personal information,
-        such as access, correction, deletion, portability, restriction, objection, withdrawal of consent, or rights relating
-        to certain targeted advertising or data sharing. You may also have the right to complain to a competent privacy or
-        data-protection authority. Requests directed to Lars Ghezzi can be submitted using the contact information below.
-        I may need to verify a request before acting on it where appropriate or legally required.
-    </p>
+  <h2>16. Data Retention and Deletion</h2>
+  <h3>Data stored locally</h3>
+  <p>
+    Data stored only on your device generally remains there until it is overwritten through normal use, deleted through an available in-app or operating-system function, cleared through platform settings where supported, or removed when you uninstall the Application. Device backups or platform restore features may affect whether some local data reappears after reinstallation.
+  </p>
 
-    <h2>International Processing</h2>
-    <p>
-        Third-party providers such as Apple and Google operate internationally. Information processed by them may therefore
-        be handled in countries other than the country where you live. Those providers are responsible for the safeguards
-        and transfer mechanisms applicable to their processing as described in their privacy policies and legal terms.
-    </p>
+  <h3>Third-party data</h3>
+  <p>
+    Information processed by Apple, Google, AdMob, Game Center, Google Play Games, or another third-party service is retained according to that provider's retention rules, account settings, and legal obligations. I generally cannot directly delete information controlled solely by those providers, although you may have deletion or account controls through the relevant provider.
+  </p>
 
-    <h2>App Store and Google Play Privacy Disclosures</h2>
+  <h3>Information held directly by me</h3>
+  <p>
+    If I directly hold personal information about you, for example because you contacted support, I retain it only for as long as reasonably necessary for the purpose for which it was received and for legitimate legal, security, fraud-prevention, accounting, or dispute-resolution needs. You may request access, correction, or deletion using the contact information below.
+  </p>
+
+  <h2>17. Your Privacy Choices and Rights</h2>
+  <p>Depending on your device, region, Application, and platform, you may be able to:</p>
+  <ul>
+    <li>deny or revoke Apple tracking permission;</li>
+    <li>manage advertising consent or personalization choices where offered;</li>
+    <li>manage notification permission;</li>
+    <li>reset or manage advertising identifiers and related device privacy settings;</li>
+    <li>sign out of or manage Apple Game Center or Google Play Games through your platform account;</li>
+    <li>manage purchase history, subscriptions, or payment information through your Apple or Google account;</li>
+    <li>delete local Application data through available in-app or platform controls or by uninstalling the Application; and</li>
+    <li>stop future use of an Application by uninstalling it.</li>
+  </ul>
+  <p>
+    Depending on where you live, privacy law may also give you rights such as access, correction, deletion, portability, restriction, objection, withdrawal of consent, or rights relating to certain targeted advertising or data sharing. You may also have the right to complain to a competent privacy or data-protection authority.
+  </p>
+  <p>
+    Requests concerning personal information held directly by me can be sent using the contact information below. I may need to verify a request before acting on it where appropriate or legally required.
+  </p>
+
+  <h2>18. Children</h2>
+  <p>
+    The Applications are not intended to knowingly collect personal information from children under the age of 13 without appropriate authorization. In jurisdictions that apply a higher minimum age or additional child-privacy requirements, the applicable rules may be different.
+  </p>
+  <p>
+    Advertising, consent, and store configuration may be adjusted where an Application or user is subject to child-privacy or age-related requirements. If you believe a child has provided personal information directly to me, please contact me so that the matter can be reviewed and, where appropriate, the information deleted.
+  </p>
+
+  <h2>19. Sharing Features, Reviews, and External Links</h2>
+  <p>
+    Some Applications can open the device's system share sheet, an App Store or Google Play review prompt, a developer store page, a support page, or another external link. Information you choose to share through another application is handled by the service or application you select. Store reviews and external websites are governed by the applicable platform or website's own privacy terms.
+  </p>
+
+  <h2>20. Security</h2>
+  <p>
+    I use reasonable administrative and technical measures appropriate to the information I handle directly. Much of the Applications' ordinary gameplay information is stored locally on your device, where protection also depends on the security of your device and operating system.
+  </p>
+  <p>
+    No method of electronic transmission or storage is completely secure, so absolute security cannot be guaranteed.
+  </p>
+
+  <h2>21. App Store and Google Play Privacy Disclosures</h2>
+  <p>
+    Each Application may have platform-specific privacy disclosures, including Apple's App Privacy information and Google Play's Data safety section. Those disclosures are intended to describe the data practices of the specific Application and the SDKs or platform services enabled in that version.
+  </p>
+  <p>
+    Because features and configurations can differ between Applications and platforms, the store disclosures may not be identical for every Application. I aim to keep those disclosures consistent with the current Application configuration and this Privacy Policy.
+  </p>
+
+  <h2>22. Privacy Policy Website</h2>
+  <p>
+    This privacy-policy page does not intentionally use advertising trackers or analytics cookies. The website hosting provider may still process basic technical information, such as IP address, browser information, request time, and server logs, as necessary to deliver, secure, and operate the webpage under the provider's own terms.
+  </p>
+
+  <h2>23. Changes to This Privacy Policy</h2>
+  <p>
+    I may update this Privacy Policy when an Application, SDK, advertising setup, platform requirement, legal requirement, or data practice changes. The current version will be published on this page with an updated "Last updated" date. Material changes will also be reflected in relevant App Store or Google Play disclosures where required.
+  </p>
+
+  <div class="contact">
+    <h2>24. Contact</h2>
     <p>
-        Each Application's store listing may include platform-specific privacy disclosures, including Apple's App Privacy
-        information and Google Play's Data safety section. Those disclosures are intended to describe the data practices of
-        the specific Application and the third-party SDKs or platform services enabled in that version. Because features,
-        advertising settings, and SDK configurations can differ between Applications and platforms, the store disclosures
-        may not be identical for every Application.
+      <strong>Lars Ghezzi</strong><br>
+      Email: <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a>
     </p>
     <p>
-        If there is a material difference between an older store disclosure and the current Application configuration,
-        the store disclosure should be updated to reflect the current version. This Privacy Policy is intended to provide
-        the broader explanation of those practices across the Applications covered above.
+      For questions about this Privacy Policy, privacy practices, consent, or a request concerning personal information, including an access, correction, or deletion request, please contact me using the email address above.
     </p>
+  </div>
 
-    <h2>Security</h2>
-    <p>
-        Reasonable administrative and technical measures are used to protect information handled directly under
-        Lars Ghezzi's control. Much of the Applications' ordinary game data is stored locally on the user's device,
-        where protection also depends on the security of the device and operating system. No method of electronic
-        transmission or storage is completely secure, and absolute security cannot be guaranteed.
-    </p>
-
-    <h2>Children</h2>
-    <p>
-        The Applications are not intended to knowingly collect personal information from children under the age of 13
-        without appropriate authorization. Advertising, consent, and store settings may vary where an Application or user
-        is subject to child-privacy or age-related requirements. If a specific Application is directed to children or is
-        subject to additional child-privacy requirements, its configuration and store disclosures will be adjusted as
-        required. If you believe that a child has provided personal information directly to Lars Ghezzi, please contact me
-        so that the matter can be reviewed and, where appropriate, the information deleted.
-    </p>
-
-    <h2>Privacy Policy Website Analytics</h2>
-    <p>
-        This privacy-policy webpage uses <strong>Google Analytics</strong>. When you visit this webpage, Google may process
-        technical and usage information such as your IP address, browser or device information, and page interactions in
-        accordance with Google's privacy policy and the configuration of this website. This website analytics processing
-        is separate from the data practices of the mobile Applications themselves.
-    </p>
-
-    <h2>Changes to This Privacy Policy</h2>
-    <p>
-        This Privacy Policy may be updated from time to time, for example when an Application, SDK, advertising setup,
-        platform requirement, legal requirement, or data practice changes. The current version will be published on this
-        page together with an updated "Last updated" date. Material changes will be reflected in the policy and, where
-        required, in the relevant App Store or Google Play disclosures.
-    </p>
-
-    <div class="contact-info">
-        <h2>Developer and Privacy Contact</h2>
-        <p>
-            <strong>Lars Ghezzi</strong><br>
-            Email: <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a>
-        </p>
-        <p>
-            For questions about this Privacy Policy, privacy practices, consent, or a request concerning personal information,
-            including an access, correction, or deletion request, please contact me using the email address above.
-        </p>
-    </div>
-
+  <p class="small muted">
+    This policy is intended to describe the actual privacy practices of the Applications covered above. If an Application's data practices materially change, this policy and the relevant store disclosures should be updated accordingly.
+  </p>
+</main>
 </body>
 </html>
