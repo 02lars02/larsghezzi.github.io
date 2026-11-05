@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms of Use for mobile apps and games published by Lars Ghezzi, including licenses, purchases, refunds, consumer rights, and limitations of liability.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#5c42d1">
+  <link rel="canonical" href="https://larsghezzi.com/terms.html">
+  <link rel="icon" type="image/png" href="pic/icon.png">
+  <title>Terms of Use | Lars Ghezzi Apps</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafbff;
+      --surface: #ffffff;
+      --surface-soft: #f2f1fb;
+      --ink: #202338;
+      --muted: #585f73;
+      --line: #dce0ef;
+      --accent: #5c42d1;
+      --accent-soft: rgba(92,66,209,.10);
+      --highlight: #0b775c;
+      --shadow: 0 20px 55px rgba(25,25,60,.07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #090d17;
+        --surface: #111727;
+        --surface-soft: #171c30;
+        --ink: #f1f3ff;
+        --muted: #b5bfd4;
+        --line: #2c354c;
+        --accent: #b4a2ff;
+        --accent-soft: rgba(180,162,255,.11);
+        --highlight: #73e2be;
+        --shadow: 0 20px 55px rgba(0,0,0,.22);
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+    body { margin: 0; color: var(--ink); background: var(--bg); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    a { color: var(--accent); text-underline-offset: .19em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--highlight); outline-offset: 4px; border-radius: 2px; }
+    .skip-link { position: absolute; left: 16px; top: -90px; z-index: 50; padding: 10px 16px; background: var(--surface); border: 2px solid var(--accent); border-radius: 10px; }
+    .skip-link:focus { top: 10px; }
+    .topbar { border-bottom: 1px solid var(--line); background: var(--surface); }
+    .topbar-inner { max-width: 1000px; margin: auto; padding: 15px 26px; display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; align-items: center; }
+    .wordmark { font-weight: 800; letter-spacing: -.025em; color: var(--ink); text-decoration: none; font-size: 1.08rem; }
+    .topbar nav { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: .92rem; }
+    .topbar nav a { text-decoration: none; font-weight: 650; }
+    .page { max-width: 1000px; margin: auto; padding: clamp(24px,5vw,52px) 26px 78px; }
+    .eyebrow { color: var(--highlight); font-weight: 800; text-transform: uppercase; font-size: .74rem; letter-spacing: .14em; }
+    h1 { font-size: clamp(2.1rem,5vw,3.5rem); line-height: 1.13; letter-spacing: -.045em; margin: 8px 0 20px; }
+    .lead { font-size: 1.12rem; max-width: 790px; color: var(--muted); margin: 0 0 20px; }
+    .meta { font-size: .91rem; color: var(--muted); margin: 10px 0 30px; }
+    .summary { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 19px 23px; box-shadow: var(--shadow); margin: 30px 0; }
+    .summary p { margin: 8px 0; }
+    .toc { background: var(--surface-soft); border: 1px solid var(--line); border-radius: 12px; padding: 18px 25px; margin: 25px 0 38px; }
+    .toc h2 { font-size: 1.08rem; margin: 0 0 6px; }
+    .toc ol { columns: 2; column-gap: 35px; margin: 8px 0; padding-left: 22px; }
+    .toc li { break-inside: avoid; margin: 3px 0; line-height: 1.52; font-size: .92rem; }
+    .toc a { text-decoration: none; }
+    section { border-top: 1px solid var(--line); padding-top: 4px; margin-top: 35px; }
+    section h2 { font-size: 1.48rem; line-height: 1.4; letter-spacing: -.02em; margin: 24px 0 11px; }
+    section h3 { font-size: 1.06rem; margin-top: 18px; }
+    p { margin: 10px 0 13px; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 7px; }
+    strong { font-weight: 750; }
+    .muted, .small { color: var(--muted); font-size: .9rem; }
+    .apps { columns: 2; column-gap: 30px; }
+    .apps li { break-inside: avoid; }
+    address { font-style: normal; }
+    .note { background: var(--accent-soft); border-radius: 9px; padding: 14px 17px; overflow-wrap: anywhere; }
+    .summary, .toc, section { overflow-wrap: break-word; }
+    .endnav { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 38px; font-weight: 700; }
+    footer { background: var(--surface); border-top: 1px solid var(--line); }
+    footer div { max-width: 1000px; margin: auto; padding: 21px 26px; color: var(--muted); font-size: .87rem; }
+    @media (max-width: 680px) {
+      body { font-size: 15.5px; }
+      .topbar-inner { padding: 14px 18px; }
+      .page { padding: 28px 18px 52px; }
+      .toc ol, .apps { columns: 1; }
+      .toc { padding: 15px 20px; }
+      .summary { padding: 14px 17px; }
+      section h2 { font-size: 1.29rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      :root { color-scheme: light; --bg: white; --surface: white; --ink: #111; --muted: #444; --line: #ccc; --accent: #333; --highlight: #333; }
+      body { background: white; color: #111; font-size: 10.5pt; }
+      .topbar, footer, .toc, .endnav { display: none; }
+      .page { max-width: 100%; padding: 0; }
+      section { break-inside: avoid-page; }
+      h2, h3 { break-after: avoid; }
+      a { color: #111; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="index.html">Lars Ghezzi · Apps &amp; Games</a>
+      <nav aria-label="Legal navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page" id="main-content">
+    <p class="eyebrow">Legal information</p>
+    <h1>Terms of Use</h1>
+    <p class="lead">One set of clear terms for the mobile apps and games published by Lars Ghezzi, including free apps, ads, optional purchases and your consumer rights.</p>
+    <p class="meta"><strong>Effective date:</strong> <time datetime="2026-11-05">November 5, 2026</time> &nbsp;·&nbsp; <strong>Last updated:</strong> <time datetime="2026-11-05">November 5, 2026</time></p>
+
+    <div class="summary" aria-label="Important information at a glance">
+      <p><strong>All linked Apps.</strong> These Terms cover apps and games I publish that link to this page. Features, purchases, and services vary by App.</p>
+      <p><strong>Your legal rights remain protected.</strong> Mandatory consumer, refund, and digital-content rights always take precedence over any conflicting provision here.</p>
+      <p><strong>App-store purchases.</strong> Prices, paid features, and purchase confirmation are presented through Google Play or the Apple App Store.</p>
+      <p><strong>Need help?</strong> See <a href="#consumer-rights">refunds and consumer rights</a>, <a href="#contact">support</a>, or my <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <nav class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#publisher">Publisher and trader information</a></li>
+        <li><a href="#scope">Scope and acceptance</a></li>
+        <li><a href="#eligibility">Age and eligibility</a></li>
+        <li><a href="#license">License to use the Apps</a></li>
+        <li><a href="#acceptable-use">Acceptable use</a></li>
+        <li><a href="#content">Gameplay and local data</a></li>
+        <li><a href="#purchases">Purchases and digital items</a></li>
+        <li><a href="#consumer-rights">Refunds and consumer rights</a></li>
+        <li><a href="#advertising">Advertisements and external services</a></li>
+        <li><a href="#intellectual-property">Intellectual property</a></li>
+        <li><a href="#availability">Updates and availability</a></li>
+        <li><a href="#disclaimers">App content and disclaimers</a></li>
+        <li><a href="#warranties">Warranties and conformity</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#privacy">Privacy and information</a></li>
+        <li><a href="#termination">Ending use</a></li>
+        <li><a href="#changes">Changes to these Terms</a></li>
+        <li><a href="#law">Law and disputes</a></li>
+        <li><a href="#apple">Apple App Store provisions</a></li>
+        <li><a href="#miscellaneous">General provisions</a></li>
+        <li><a href="#apps-covered">Apps covered</a></li>
+        <li><a href="#contact">Questions and complaints</a></li>
+      </ol>
+    </nav>
+
+    <section id="publisher">
+      <h2>1. Publisher and trader information</h2>
+      <p>The Apps are developed and published under the developer name <strong>Lars Ghezzi</strong> (referred to in these Terms as the “Developer”, “I”, “me”, or “my”). I am an independent app developer based in Switzerland.</p>
+      <p><strong>Support and legal contact:</strong> <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a>. Website: <a href="https://larsghezzi.com/">larsghezzi.com</a>.</p>
+      <p>For Apps distributed through Google Play or the Apple App Store, the applicable store listing provides the publisher or trader identity and postal contact details where required by law. Please check the <em>App support</em>, <em>Developer information</em>, or <em>Trader information</em> area of the relevant App's store page before buying. If these details are not accessible or you need to deliver a formal notice, contact me by email and I will provide an appropriate contact channel.</p>
+      <p>The website does not itself operate a payment checkout for the Apps. This section does not reduce any pre-contractual disclosure obligation or other right you have under applicable law.</p>
+    </section>
+
+    <section id="scope">
+      <h2>2. Scope and acceptance</h2>
+      <p>These Terms apply to mobile games and applications I publish that link to this page (each an “App”, together the “Apps”), whether downloaded through Google Play or the Apple App Store, unless specific terms are clearly presented for an individual App. The <a href="#apps-covered">list below</a> identifies Apps available at the date of this document. Future Apps are covered only when they expressly link to these Terms.</p>
+      <p>App descriptions, feature availability, supported devices, and the precise details of a paid offer are set out in the relevant App and its store listing. If a feature mentioned here is not offered in your App, the related clause does not create a promise to provide it.</p>
+      <p>These Terms apply when validly presented and accepted or otherwise incorporated into your use of an App under applicable law. If you do not agree, do not use the App; you may uninstall it. Purchases are made using the relevant app store's checkout, which displays the applicable offer and payment conditions before you confirm an order.</p>
+      <p>The rules and terms of the app store from which you obtained the App also apply. If there is a conflict, mandatory law takes priority, followed by applicable app-store terms where those terms govern the transaction or license. For Apps obtained through Apple's App Store, Apple's standard licensed application end-user license agreement applies unless a separate custom EULA is expressly made available in the App Store. These Terms supplement, and do not purport to replace or contradict, that applicable agreement.</p>
+    </section>
+
+    <section id="eligibility">
+      <h2>3. Age and eligibility</h2>
+      <p>Apps may be used only where permitted by law and their displayed age rating. If you are a minor, your parent or legal guardian may need to approve your use of an App and any purchases, depending on local law and store policies. You must not make purchases without any required parental permission.</p>
+      <p>You are responsible for complying with laws and third-party terms applicable to your own use of the Apps, including any relevant restrictions imposed by your device or app-store account.</p>
+    </section>
+
+    <section id="license">
+      <h2>4. License to use the Apps</h2>
+      <p>Subject to payment of any applicable price and compliance with these Terms, the Developer grants you a limited, non-exclusive, non-transferable, non-sublicensable license to download and use each App for its intended purposes on devices you own or control, consistent with the applicable app store's usage rules. This is a license to use software, not a sale of copyright or ownership of the App.</p>
+      <p>For Apple App Store downloads, the scope of the license is governed by Apple's applicable standard EULA and its usage rules, including any permitted Family Sharing or volume-purchase arrangements. Nothing here overrides those rights or restrictions, nor any non-excludable statutory rights.</p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2>5. Acceptable use</h2>
+      <p>Except where applicable law gives you a right to do so, you must not:</p>
+      <ul>
+        <li>copy, redistribute, sell, sublicense, or commercially exploit the Apps or their assets without permission;</li>
+        <li>reverse-engineer, decompile, or bypass technical protection measures, except to the extent expressly permitted by law;</li>
+        <li>use exploits, bots, or unauthorized tools to disrupt an App, its services, or other players' fair use of any connected feature;</li>
+        <li>attempt to access services, data, or systems without authorization; or</li>
+        <li>use an App to infringe another person's rights or violate applicable laws.</li>
+      </ul>
+      <p>Lawful personal gameplay, legally permitted interoperability, accessibility use, and uses protected by mandatory rights are not prohibited by this section.</p>
+    </section>
+
+    <section id="content">
+      <h2>6. Gameplay, virtual items, and local progress</h2>
+      <p>Many Apps are games, simulations, or focus and productivity tools. Results, in-game statistics, virtual money, points, characters, levels, and other virtual items exist only within the relevant App. Unless the App expressly says otherwise, they have no real-world monetary value and cannot be exchanged, sold, or redeemed for money or items outside the App.</p>
+      <p>Many Apps save ordinary game progress and preferences locally on your device rather than in a Developer-operated cloud account. Progress may be lost if you uninstall an App, clear its data, reset or replace a device, or encounter a device or software failure. Platform backup and restore features may help where supported, but they are not guaranteed to preserve every setting, save file, or achievement. Where possible, back up your device before reinstalling or resetting it. This paragraph does not limit any legally required remedy for a defective App or Digital Product.</p>
+      <p>The Apps do not promise particular scores, results, rankings, progress, or outcomes. Optional achievements, leaderboards, and shared-game features depend on the relevant platform services and may not always be available. Restoring a paid entitlement does not necessarily restore locally stored game progress; mandatory rights concerning paid digital content remain unaffected.</p>
+    </section>
+
+    <section id="purchases">
+      <h2>7. In-app purchases and other payments</h2>
+      <p>Some, but not all, Apps offer paid downloads, one-time upgrades, ad removal, consumable virtual items, or other in-app purchases (“Digital Products”). Their availability and functionality are described within the relevant App and its store listing. No particular purchase type is available in every App.</p>
+      <ul>
+        <li><strong>Prices and orders.</strong> The store's checkout page displays the purchase price, currency, applicable taxes or fees where required, and the steps for confirming an order. You can review or cancel before the final purchase confirmation using the store controls. The store issues the applicable transaction confirmation or receipt.</li>
+        <li><strong>Payment handling.</strong> Payments are processed through the relevant app store or its payment provider. I do not directly collect your complete card details through these Apps. The store's payment and billing terms also apply.</li>
+        <li><strong>Digital entitlements.</strong> A successful purchase grants the described right to use that Digital Product under the applicable license, not ownership of the App's code or intellectual property. Unless expressly stated otherwise in the offer, a purchase applies only to the specified App and does not unlock content in other Apps. Consumables can be used up and are generally not restorable once consumed. A non-consumable entitlement may be restorable through the relevant store account where technically supported. If a valid purchase is not recognized, contact me with the App name and relevant store receipt or transaction reference.</li>
+        <li><strong>Subscriptions, if offered.</strong> Before purchase, the relevant App and store checkout will provide the subscription price, billing interval, renewal and cancellation information required by law. Any automatic renewal follows the disclosed store terms and applicable law. You can generally manage or cancel subscriptions in the account used for the purchase. Uninstalling an App alone does not cancel an active subscription.</li>
+        <li><strong>Purchases made in error.</strong> Contact the relevant store or me promptly. Please provide the App name and, where needed, a store transaction identifier, but never send full card details or passwords.</li>
+        <li><strong>Purchase descriptions.</strong> The applicable App's store listing and in-app offer define what is included in a purchase. If there is a material discrepancy, your mandatory rights to correction or other remedies remain unaffected.</li>
+      </ul>
+      <p>Purchases and entitlements may be limited by device compatibility, account status, platform policies, or technical restrictions. These limitations do not remove remedies available for non-delivery, defects, or non-conformity under applicable law.</p>
+    </section>
+
+    <section id="consumer-rights">
+      <h2>8. Refunds, withdrawal rights, and statutory remedies</h2>
+      <p><strong>Nothing in these Terms removes or restricts mandatory consumer rights.</strong> Depending on your country, you may have legal rights to remedies if an App or Digital Product is faulty, not delivered, or not as described. These may include repair or correction, bringing digital content into conformity, a price reduction, contract termination, or a refund.</p>
+      <p>Where a right of withdrawal applies to distance purchases, including eligible purchases by consumers in the European Economic Area or the United Kingdom, the applicable statutory period and exceptions govern. For certain digital content supplied immediately, that right may be lost only if the applicable legal conditions have been met, including any required prior express consent, acknowledgment of the consequence, and confirmation. <strong>Using or downloading an App does not by itself mean you have waived a statutory right of withdrawal.</strong></p>
+      <p>For a purchase made through Google Play or Apple's App Store, you may first use that store's refund or purchase-support process. You can also contact me at <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a> regarding a defective product, unfulfilled purchase, statutory claim, or other complaint. Store policies are not intended to override any refund, withdrawal, or warranty right that applicable law gives you.</p>
+      <p class="small">Useful store resources: <a href="https://support.google.com/googleplay/answer/2479637">Google Play refunds</a> and <a href="https://reportaproblem.apple.com/">Apple purchase support</a>.</p>
+    </section>
+
+    <section id="advertising">
+      <h2>9. Advertising and third-party services</h2>
+      <p>Some Apps display advertising, which may be provided by third parties such as Google AdMob. Advertising, personalized advertising where lawful, measurement, consent, and related data practices are described in the <a href="privacy-policy.html">Privacy Policy</a>. Advertising revenue helps support free or lower-cost versions of Apps.</p>
+      <p>Some Apps also use Google Play services, Google Play Games, Apple Game Center, device notifications, app-store payment systems, or other platform services. Your use of these services may also be governed by their own terms and privacy notices. Third-party availability, purchases, and platform account functions are partly outside my control.</p>
+      <p>Ads and third-party links are not necessarily endorsements. You should review third-party offers and conditions before engaging with them. I remain responsible for my own conduct and obligations to the extent required by law.</p>
+    </section>
+
+    <section id="intellectual-property">
+      <h2>10. Intellectual property and user feedback</h2>
+      <p>The Apps and their original software, graphics, names, interfaces, audio, texts, and other content are owned by the Developer or the respective rights holders and are protected by applicable intellectual-property laws. All rights not expressly granted are reserved.</p>
+      <p>You may share screenshots, scores, or short gameplay excerpts for lawful personal, commentary, or review purposes, subject to third-party rights and applicable law. This does not grant a right to sell or redistribute the Apps or their underlying assets.</p>
+      <p>If you choose to send ideas, suggestions, or bug reports, I may use their general contents to maintain, troubleshoot, and improve the Apps without an obligation to pay for unsolicited ideas. This does not transfer ownership of your personal materials, grant rights over third-party content, or override your privacy rights.</p>
+    </section>
+
+    <section id="availability">
+      <h2>11. Updates, changes, and availability</h2>
+      <p>I may release updates to fix errors, improve security and accessibility, meet platform requirements, or modify features. Some functionality requires a compatible device, current operating system, internet access, or third-party service. Costs charged by your internet or mobile provider are your responsibility.</p>
+      <p>I aim to give reasonable notice of material changes or discontinuation when practicable, particularly when paid functionality is affected. For digital content or ongoing services covered by mandatory consumer law, I will provide legally required security or conformity updates and make changes beyond those necessary for conformity only under the conditions permitted by law. Where required, this includes having a valid reason, imposing no additional charge, giving appropriate advance information, and respecting any right to terminate. Free features may change, but this does not remove paid entitlements or statutory remedies unlawfully.</p>
+      <p>Because software and external services can fail, uninterrupted or error-free availability cannot be guaranteed. If you encounter a problem, please report it using the contact information below.</p>
+    </section>
+
+    <section id="disclaimers">
+      <h2>12. Games, simulations, and other content</h2>
+      <p>Games featuring political systems, religion, law, business, aviation, prisons, economics, or other real-world subjects are interactive simulations and entertainment products. Events, statistics, scenarios and results may be fictional, simplified, dated or inaccurate and are not a reliable basis for real-world legal, financial, professional, political or other important decisions. Focus and productivity tools are not medical or mental-health services or treatment.</p>
+      <p>Unless explicitly stated otherwise, the Apps are independently developed and are not sponsored, endorsed, or approved by any government, political party, religious organization, airline, institution, or company mentioned or portrayed. Names, logos, and trademarks belonging to third parties remain the property of their respective owners.</p>
+      <p>Use the Apps responsibly. Do not interact with games while driving or while performing tasks requiring attention. Take breaks where appropriate.</p>
+    </section>
+
+    <section id="warranties">
+      <h2>13. Warranties and digital-content conformity</h2>
+      <p>I make reasonable efforts to provide Apps that substantially function as described and to address reported problems. However, within the limits allowed by applicable law, I do not promise that every App will meet every individual expectation or always be uninterrupted, fully compatible, or free from defects.</p>
+      <p>To the extent the law permits, any warranties beyond those expressly made or required by law are disclaimed. <strong>This does not exclude or reduce mandatory legal guarantees, digital-content conformity requirements, required updates, or remedies for defective products.</strong> Where a statutory warranty or remedy applies, it takes precedence over conflicting wording in these Terms.</p>
+    </section>
+
+    <section id="liability">
+      <h2>14. Limitation of liability</h2>
+      <p>To the maximum extent permitted by applicable law, I am not responsible for losses caused solely by circumstances outside my reasonable control, including independent device failures, telecommunications outages, or third-party service interruptions, where I have not breached an applicable legal duty.</p>
+      <p>Where applicable law allows these exclusions, I will not be liable for indirect, incidental, consequential, or special losses that were not reasonably foreseeable when the relevant agreement was made, or for losses resulting from misuse of an App contrary to these Terms. These exclusions do not apply if and to the extent such liability cannot legally be excluded.</p>
+      <p><strong>Business use only:</strong> If you use an App primarily for business or professional purposes, and only insofar as a monetary cap is legally enforceable, my aggregate contractual liability arising out of that App is limited to the greater of (a) amounts paid for that App and its in-app purchases during the 12 months preceding the event giving rise to the claim or (b) CHF 100. <strong>This contractual cap does not apply to consumer claims, or to any liability that cannot lawfully be restricted.</strong></p>
+      <p><strong>Nothing in these Terms excludes or limits liability for intentional wrongdoing, fraud, gross negligence, death or personal injury caused by negligence, mandatory product liability, or any other liability that cannot lawfully be restricted.</strong> Any limitation inconsistent with mandatory Swiss, EEA, UK, or other applicable consumer-protection rules is ineffective to that extent.</p>
+    </section>
+
+    <section id="privacy">
+      <h2>15. Privacy and personal information</h2>
+      <p>Information may be processed by the Apps, app stores, advertising partners, and platform services as explained in the separate <a href="privacy-policy.html">Privacy Policy</a>. It covers relevant categories of data, purposes, advertising and consent, providers, retention, international transfers, and available privacy rights. This document does not replace that policy.</p>
+      <p>In the current Apps, ordinary gameplay typically works without a separate Developer-operated account. If this changes for a particular App, its privacy disclosures and these Terms will be updated where necessary.</p>
+    </section>
+
+    <section id="termination">
+      <h2>16. Ending use and suspension</h2>
+      <p>You may stop using an App and uninstall it at any time. Uninstalling may delete local data; it does not automatically cancel a subscription or reverse an earlier transaction. Any cancellation or refund rights remain subject to applicable law and the store's purchase system.</p>
+      <p>Where technically available and proportionate, I may restrict access to online features in response to a material violation of these Terms, security abuse, or legal requirements. I will respect applicable notice, review, refund, and consumer-protection obligations. Licenses may end following a valid termination of the applicable agreement; provisions that logically survive termination, such as intellectual-property ownership and lawful dispute provisions, continue to apply.</p>
+    </section>
+
+    <section id="changes">
+      <h2>17. Changes to these Terms</h2>
+      <p>I may update these Terms for legal, security, operational, or product-related reasons. The current version and its update date will be published at <a href="https://larsghezzi.com/terms.html">https://larsghezzi.com/terms.html</a>.</p>
+      <p>Material changes will be communicated in an appropriate manner where required by law. A changed webpage does not, on its own, take away rights already accrued or change an existing paid contract to your detriment without a lawful basis or any necessary consent. If a valid change is unacceptable to you, you may stop using the affected App, subject to your rights under applicable law.</p>
+    </section>
+
+    <section id="law">
+      <h2>18. Applicable law and resolution of disputes</h2>
+      <p>Subject to mandatory consumer-protection and conflict-of-laws rules, these Terms and disputes concerning the Apps are governed by the substantive laws of Switzerland.</p>
+      <p><strong>If you are a consumer, this choice of law does not deprive you of mandatory protections under the law of your country of habitual residence where those protections apply.</strong> Nor does it exclude the right to bring proceedings before the courts of your place of residence where mandatory jurisdiction rules provide that right. Otherwise, the competent courts are determined under applicable law, including the courts at the Developer's domicile in Switzerland where legally permitted.</p>
+      <p>If you experience a problem, you are encouraged to contact me first at <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a> so I can try to resolve it. This is voluntary and does not prevent you from exercising legal rights, reporting issues to regulators, or bringing court proceedings.</p>
+    </section>
+
+    <section id="apple">
+      <h2>19. Additional information for Apple App Store users</h2>
+      <p>For an App downloaded from Apple's App Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard Licensed Application End User License Agreement</a> applies unless a different custom EULA is expressly offered through the App Store. <strong>These website Terms are supplemental; they are not intended to replace Apple's Standard EULA or to serve as a separate custom EULA.</strong> Apple's applicable license controls permitted device use, sharing rights and related license matters. The rules are read together where compatible, subject to mandatory law.</p>
+      <p>The Developer, rather than Apple, is responsible for the App and its content, and for legally required maintenance, support, and responses to applicable product claims. Apple's responsibilities and any entitlement to a purchase-price refund for a failure to conform to an applicable warranty are determined by its applicable license, store terms, and mandatory law. Apple is not responsible for providing Developer support.</p>
+      <p>Use of an App may also require compliance with the terms of your mobile network operator and other applicable third-party services.</p>
+    </section>
+
+    <section id="miscellaneous">
+      <h2>20. General provisions</h2>
+      <p>If a provision is invalid or unenforceable in your jurisdiction, it will be limited or disregarded only to the extent necessary, without affecting the remainder of these Terms, unless applicable law provides otherwise.</p>
+      <p>Failure to enforce a provision immediately does not automatically waive the right to enforce it later, where legally permissible. No provision grants a third party enforcement rights unless applicable law or an applicable platform agreement provides otherwise. Headings are included for convenience and do not change the meaning of the Terms.</p>
+      <p>These Terms do not restrict rights you may have under mandatory law or a non-excludable app-store agreement. The English text is the version published by the Developer; language and disclosure requirements that apply in a particular country remain unaffected.</p>
+    </section>
+
+    <section id="apps-covered">
+      <h2>21. Apps covered</h2>
+      <p>The following Apps were listed on my website or in my Privacy Policy as of the effective date. This list is informational: these Terms also cover later Apps I publish <strong>only when they link to this page</strong>, unless a specific App presents additional or different terms:</p>
+      <ul class="apps">
+        <li>GovCraft: President Simulator</li>
+        <li>Darts Star: World Champion</li>
+        <li>Hotel Empire: Tycoon Manager</li>
+        <li>Music Tycoon: Label Manager</li>
+        <li>Warden Tycoon: Prison Manager</li>
+        <li>Your Honor: Judge Simulator</li>
+        <li>Sky Empire: Airline Manager</li>
+        <li>Mayor Simulator: Run Your City</li>
+        <li>AirlineCEO: Schedule Manager</li>
+        <li>ElectionCraft: CampaignManager</li>
+        <li>Stellar Dealer: Space Trader</li>
+        <li>Conclave: Pope Simulator</li>
+        <li>Focus Garden: Time your Growth</li>
+        <li>Foldings: Puzzle Runner</li>
+        <li>Focus King: Stay sharp King</li>
+        <li>Focus Queen: Stay slay Queen</li>
+        <li>Loop Looters: Echo Hunt</li>
+      </ul>
+      <p>Features vary by App, operating system, version, country, and store. A reference in these Terms to advertising, a purchase, a subscription, game services, or any other optional function does not mean that every App offers it.</p>
+    </section>
+
+    <section id="contact">
+      <h2>22. Questions, legal notices, and complaints</h2>
+      <p>For technical support, purchase issues, valid withdrawal requests, consumer-rights claims or other complaints, please contact:</p>
+      <div class="note">
+        <strong>Lars Ghezzi · App Developer</strong>
+        <p><strong>Email:</strong> <a href="mailto:support.larsghezzi@gmail.com">support.larsghezzi@gmail.com</a></p>
+        <p><strong>Publisher/trader postal details:</strong> Check the relevant official Google Play or Apple App Store listing, where these are disclosed as required. If you cannot access them, email me for a suitable way to submit formal correspondence.</p>
+      </div>
+      <p>To help identify the issue, please mention the App name, a short description of the problem, your device or operating-system version, and—if the question concerns a purchase—the relevant store receipt or transaction reference. Screenshots are welcome if they do not contain sensitive information. <strong>Never send passwords, full card numbers, or unrelated personal data.</strong></p>
+      <p>I aim to review legitimate requests within a reasonable time, but no specific support-response time is promised unless legally required. You may also contact the relevant app store for purchase support. Contacting me first is voluntary and does not limit your right to contact a consumer authority, use a legally available dispute process, or go to court.</p>
+      <div class="endnav">
+        <a href="index.html">← Back to all apps</a>
+        <a href="privacy-policy.html">Read the Privacy Policy</a>
+      </div>
+    </section>
+  </main>
+  <footer><div>© 2026 Lars Ghezzi. Terms of Use for mobile apps and games. <a href="privacy-policy.html">Privacy Policy</a>.</div></footer>
+</body>
+</html>
